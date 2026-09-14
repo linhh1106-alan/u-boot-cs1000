@@ -1,0 +1,2 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/system_bootdev.c:42:12:system_bootdev_bind	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/system_bootdev.c:21:12:system_get_bootflow	32	static

@@ -1,0 +1,13 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_variable_tee.c:910:1:efi_query_variable_info_runtime	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_variable_tee.c:928:1:efi_set_variable_runtime	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_variable_tee.c:431:12:setup_mm_hdr	80	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_variable_tee.c:397:35:mm_communicate	112	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_variable_tee.c:534:21:set_property_int	96	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_variable_tee.c:568:21:get_property_int	96	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_variable_tee.c:479:21:get_max_payload	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_variable_tee.c:613:14:efi_get_variable_int	144	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_variable_tee.c:700:14:efi_get_next_variable_name_int	112	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_variable_tee.c:764:14:efi_set_variable_int	160	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_variable_tee.c:860:14:efi_query_variable_info_int	80	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_variable_tee.c:938:6:efi_variables_boot_exit_notify	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_variable_tee.c:983:14:efi_init_variables	32	static

@@ -1,0 +1,4 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/input/key_matrix.c:108:15:create_keymap	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/input/key_matrix.c:55:5:key_matrix_decode	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/input/key_matrix.c:141:5:key_matrix_decode_fdt	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/input/key_matrix.c:179:5:key_matrix_init	48	static

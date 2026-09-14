@@ -1,0 +1,5 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_capsule.c:611:35:efi_update_capsule	80	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_capsule.c:711:35:efi_query_capsule_caps	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_capsule.c:394:14:efi_capsule_authenticate	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_capsule.c:541:14:efi_corstone1000_alloc_capsule_shared_buf	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_capsule.c:748:21:efi_load_capsule_drivers	48	static

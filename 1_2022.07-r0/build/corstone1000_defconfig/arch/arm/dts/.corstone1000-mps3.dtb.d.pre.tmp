@@ -1,0 +1,6 @@
+.corstone1000-mps3.dtb.pre.o: arch/arm/dts/.corstone1000-mps3.dtb.pre.tmp \
+ /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/include/linux/kconfig.h \
+ include/generated/autoconf.h \
+ /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/arch/arm/dts/corstone1000.dtsi \
+ /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/include/dt-bindings/interrupt-controller/arm-gic.h \
+ /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/include/dt-bindings/interrupt-controller/irq.h

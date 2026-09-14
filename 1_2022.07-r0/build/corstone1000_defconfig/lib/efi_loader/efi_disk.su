@@ -1,0 +1,10 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_disk.c:739:12:efi_disk_remove	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_disk.c:301:28:efi_disk_flush_blocks	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_disk.c:67:28:efi_disk_reset	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_disk.c:391:21:efi_disk_add_dev.part.0	128	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_disk.c:635:12:efi_disk_probe	112	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_disk.c:169:28:efi_disk_read_blocks	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_disk.c:235:28:efi_disk_write_blocks	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_disk.c:83:6:efi_disk_is_removable	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_disk.c:327:1:efi_fs_from_path	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_disk.c:755:14:efi_disk_init	16	static

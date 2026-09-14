@@ -1,0 +1,5 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/cmd/bootm.c:122:5:do_bootm	80	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/cmd/bootm.c:235:5:do_bootd	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/cmd/bootm.c:279:12:image_info	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/cmd/bootm.c:260:12:do_iminfo	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/cmd/bootm.c:169:5:bootm_maybe_autostart	48	static

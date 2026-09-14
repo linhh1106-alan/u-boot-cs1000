@@ -1,0 +1,1 @@
+cmd_board/armltd/corstone1000/built-in.o :=  rm -f board/armltd/corstone1000/built-in.o; aarch64-poky-linux-musl-ar cDPrsT board/armltd/corstone1000/built-in.o board/armltd/corstone1000/corstone1000.o

@@ -1,0 +1,74 @@
+OEOuthashBasic
+14
+bsd-headers: 877dafc6f2faca89f3edde9d7e07b560142a0ed8234d3298c581be6253f1480c
+gcc-runtime: ebcc286b6fe9e3e22ae838074a5921b2c92dba1a8d72608e15e6b6f34b2e6360
+libgcc: 423dcc3d7a090929dd73f9fdae2acfd7a6ea88e57204fa492c16c1e47ce100ff
+libssp-nonshared: c30809009a7916a27781629b419f781b673f08164e0b1421f0936dc044f32d13
+linux-libc-headers: 1f057d18a5d56eac04363af4a86dafd34896ecdea680fc2239d8bbb6721225f4
+musl: 5edcd86db79b9f28a797e25c1385ba46b0c81aaa3f9e0871b8f470422b4de7d6
+SSTATE_PKGSPEC=sstate:u-boot:corstone1000_fvp-poky-linux-musl:2022.07:r0:corstone1000_fvp:10:
+task=package
+drwxr-xr-x       root       root 1657546978                                                                                       ./package
+drwxr-xr-x       root       root 1657546978                                                                                       ./package/boot
+-rw-r--r--       root       root 1657546978               737216 b550398806526fdd4a7978c3fb3d043877afe23dd54924df783917cf4d06d349 ./package/boot/u-boot-EFI-2022.07-r0.bin
+lrwxrwxrwx       root       root 1657546978                                                                                       ./package/boot/u-boot.bin -> u-boot-EFI-2022.07-r0.bin
+lrwxrwxrwx       root       root 1657546978                                                                                       ./package/boot/u-boot.bin-EFI -> u-boot-EFI-2022.07-r0.bin
+drwxr-xr-x       root       root 1657546978                                                                                       ./package/etc
+lrwxrwxrwx       root       root 1657546978                                                                                       ./package/etc/u-boot-initial-env -> u-boot-initial-env-corstone1000-fvp-EFI-2022.07-r0
+lrwxrwxrwx       root       root 1657546978                                                                                       ./package/etc/u-boot-initial-env-EFI -> u-boot-initial-env-corstone1000-fvp-EFI-2022.07-r0
+lrwxrwxrwx       root       root 1657546978                                                                                       ./package/etc/u-boot-initial-env-corstone1000-fvp-EFI -> u-boot-initial-env-corstone1000-fvp-EFI-2022.07-r0
+-rw-r--r--       root       root 1657546978                 3311 20821f53b9abbe5ccc8b20db089e251b52e0c49e5bd7c4215e9267af64317675 ./package/etc/u-boot-initial-env-corstone1000-fvp-EFI-2022.07-r0
+drwxr-xr-x       root       root 1657546978                                                                                       ./packages-split
+drwxrwxrwx       root       root 1657546978                                                                                       ./packages-split/u-boot
+drwxr-xr-x       root       root 1657546978                                                                                       ./packages-split/u-boot/boot
+-rw-r--r--       root       root 1657546978               737216 b550398806526fdd4a7978c3fb3d043877afe23dd54924df783917cf4d06d349 ./packages-split/u-boot/boot/u-boot-EFI-2022.07-r0.bin
+lrwxrwxrwx       root       root 1657546978                                                                                       ./packages-split/u-boot/boot/u-boot.bin -> u-boot-EFI-2022.07-r0.bin
+lrwxrwxrwx       root       root 1657546978                                                                                       ./packages-split/u-boot/boot/u-boot.bin-EFI -> u-boot-EFI-2022.07-r0.bin
+drwxrwxrwx       root       root 1657546978                                                                                       ./packages-split/u-boot-dbg
+drwxrwxrwx       root       root 1657546978                                                                                       ./packages-split/u-boot-dev
+drwxrwxrwx       root       root 1657546978                                                                                       ./packages-split/u-boot-doc
+drwxrwxrwx       root       root 1657546978                                                                                       ./packages-split/u-boot-env
+drwxr-xr-x       root       root 1657546978                                                                                       ./packages-split/u-boot-env/etc
+lrwxrwxrwx       root       root 1657546978                                                                                       ./packages-split/u-boot-env/etc/u-boot-initial-env -> u-boot-initial-env-corstone1000-fvp-EFI-2022.07-r0
+lrwxrwxrwx       root       root 1657546978                                                                                       ./packages-split/u-boot-env/etc/u-boot-initial-env-EFI -> u-boot-initial-env-corstone1000-fvp-EFI-2022.07-r0
+lrwxrwxrwx       root       root 1657546978                                                                                       ./packages-split/u-boot-env/etc/u-boot-initial-env-corstone1000-fvp-EFI -> u-boot-initial-env-corstone1000-fvp-EFI-2022.07-r0
+-rw-r--r--       root       root 1657546978                 3311 20821f53b9abbe5ccc8b20db089e251b52e0c49e5bd7c4215e9267af64317675 ./packages-split/u-boot-env/etc/u-boot-initial-env-corstone1000-fvp-EFI-2022.07-r0
+drwxrwxrwx       root       root 1657546978                                                                                       ./packages-split/u-boot-extlinux
+drwxrwxrwx       root       root 1657546978                                                                                       ./packages-split/u-boot-locale
+drwxrwxrwx       root       root 1657546978                                                                                       ./packages-split/u-boot-src
+drwxrwxrwx       root       root 1657546978                                                                                       ./packages-split/u-boot-staticdev
+drwxr-xr-x       root       root 1657546978                                                                                       ./pkgdata
+-rw-r--r--       root       root 1657546978                  119 6ec558c2ba000ae1668e6380367756c1fe8cb83928476f03339f8d0882b53a2c ./pkgdata/u-boot
+drwxr-xr-x       root       root 1657546978                                                                                       ./pkgdata/extended
+-rw-r--r--       root       root 1657546978                   42 56063a220acdf73c49a0473242c17a3d20357328850ab9a1bc5dee12d31b8aba ./pkgdata/extended/u-boot-dbg.json.zstd
+-rw-r--r--       root       root 1657546978                   42 56063a220acdf73c49a0473242c17a3d20357328850ab9a1bc5dee12d31b8aba ./pkgdata/extended/u-boot-dev.json.zstd
+-rw-r--r--       root       root 1657546978                   42 56063a220acdf73c49a0473242c17a3d20357328850ab9a1bc5dee12d31b8aba ./pkgdata/extended/u-boot-doc.json.zstd
+-rw-r--r--       root       root 1657546978                  124 8b9a159a2bcdba583cea5cb2b23c34aead066676176cdc4c981524e0f52d7ab6 ./pkgdata/extended/u-boot-env.json.zstd
+-rw-r--r--       root       root 1657546978                   42 56063a220acdf73c49a0473242c17a3d20357328850ab9a1bc5dee12d31b8aba ./pkgdata/extended/u-boot-extlinux.json.zstd
+-rw-r--r--       root       root 1657546978                   42 56063a220acdf73c49a0473242c17a3d20357328850ab9a1bc5dee12d31b8aba ./pkgdata/extended/u-boot-locale.json.zstd
+-rw-r--r--       root       root 1657546978                   42 56063a220acdf73c49a0473242c17a3d20357328850ab9a1bc5dee12d31b8aba ./pkgdata/extended/u-boot-src.json.zstd
+-rw-r--r--       root       root 1657546978                   42 56063a220acdf73c49a0473242c17a3d20357328850ab9a1bc5dee12d31b8aba ./pkgdata/extended/u-boot-staticdev.json.zstd
+-rw-r--r--       root       root 1657546978                  112 f5db56ae74caff009fab2b781b6e80a1e9e4a0b0ae1b9366d4f9aed3227cdbfb ./pkgdata/extended/u-boot.json.zstd
+drwxr-xr-x       root       root 1657546978                                                                                       ./pkgdata/runtime
+-rw-r--r--       root       root 1657546978                  632 bc27dc0225973563a06b22ae8676dfc7b444723ec86ee8e455848b6601bc15db ./pkgdata/runtime/u-boot
+-rw-r--r--       root       root 1657546978                  711 0589d94de84619e9ee1afbfadd2748d1b7f9c3db4d5905be08c5a8a4636a8d5d ./pkgdata/runtime/u-boot-dbg
+-rw-r--r--       root       root 1657546978                    0 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 ./pkgdata/runtime/u-boot-dbg.packaged
+-rw-r--r--       root       root 1657546978                 1031 5b75b4490f6a463922ea38b0fab52a49fe41a2fef99300308d875e0f34d28736 ./pkgdata/runtime/u-boot-dev
+-rw-r--r--       root       root 1657546978                    0 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 ./pkgdata/runtime/u-boot-dev.packaged
+-rw-r--r--       root       root 1657546978                  693 b692d6bda5b9577b5c3bf41d855f8e4a6ef39f1bd80da47ea63509621730d6a8 ./pkgdata/runtime/u-boot-doc
+-rw-r--r--       root       root 1657546978                  815 1aebb77a274976346c1464b5361509005b0e4322674142a450b80c2e3cd49b69 ./pkgdata/runtime/u-boot-env
+-rw-r--r--       root       root 1657546978                    0 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 ./pkgdata/runtime/u-boot-env.packaged
+-rw-r--r--       root       root 1657546978                  563 a31950e625a5f109548f07ddee6568bf414765b5836c48fa97b71d783dc42955 ./pkgdata/runtime/u-boot-extlinux
+-rw-r--r--       root       root 1657546978                  542 077f7d406d5ab3a8ee37ca85d58945d2fd7fe6f320ba77cfd22adb5bf12433cc ./pkgdata/runtime/u-boot-locale
+-rw-r--r--       root       root 1657546978                  621 220ccf6f3ca90c58d02fdc426d63e0172378dca0c286a09986020ac5ba177a52 ./pkgdata/runtime/u-boot-src
+-rw-r--r--       root       root 1657546978                  800 b4a8d5a7f0d1a2be2d9e8ff58707d78b2570d62bb60f70c23b99bc0c0bca2748 ./pkgdata/runtime/u-boot-staticdev
+-rw-r--r--       root       root 1657546978                    0 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 ./pkgdata/runtime/u-boot.packaged
+drwxr-xr-x       root       root 1657546978                                                                                       ./pkgdata/runtime-reverse
+lrwxrwxrwx       root       root 1657546978                                                                                       ./pkgdata/runtime-reverse/u-boot -> ../runtime/u-boot
+lrwxrwxrwx       root       root 1657546978                                                                                       ./pkgdata/runtime-reverse/u-boot-dbg -> ../runtime/u-boot-dbg
+lrwxrwxrwx       root       root 1657546978                                                                                       ./pkgdata/runtime-reverse/u-boot-dev -> ../runtime/u-boot-dev
+lrwxrwxrwx       root       root 1657546978                                                                                       ./pkgdata/runtime-reverse/u-boot-env -> ../runtime/u-boot-env
+drwxr-xr-x       root       root 1657546978                                                                                       ./pkgdata/runtime-rprovides
+drwxr-xr-x       root       root 1657546978                                                                                       ./pkgdata/runtime-rprovides/u-boot-default-env
+lrwxrwxrwx       root       root 1657546978                                                                                       ./pkgdata/runtime-rprovides/u-boot-default-env/u-boot-env -> ../../runtime/u-boot-env
+drwxr-xr-x       root       root 1657546978                                                                                       ./pkgdata/shlibs2

@@ -1,0 +1,7 @@
+#! /bin/sh
+
+export PKG_CONFIG_PATH="/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/lib/pkgconfig:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/share/pkgconfig"
+export PKG_CONFIG_LIBDIR="/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/lib/pkgconfig"
+unset PKG_CONFIG_SYSROOT_DIR
+
+pkg-config "$@"

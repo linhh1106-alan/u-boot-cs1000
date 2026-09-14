@@ -1,0 +1,5 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_selftest/efi_selftest_fdt.c:35:17:f2h	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_selftest/efi_selftest_fdt.c:153:14:efi_st_get_config_table	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_selftest/efi_selftest_fdt.c:171:12:setup	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_selftest/efi_selftest_fdt.c:57:14:get_property.constprop	80	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_selftest/efi_selftest_fdt.c:221:12:execute	32	static

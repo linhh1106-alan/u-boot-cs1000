@@ -1,0 +1,7 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm.c:55:13:board_quiesce_devices	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm.c:276:5:bootm_find_images	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm.c:467:7:bootm_disable_interrupts	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm.c:601:5:bootm_process_cmdline	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm.c:623:5:bootm_process_cmdline_env	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm.c:690:5:do_bootm_states	144	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm.c:993:13:switch_to_non_secure_mode	0	static

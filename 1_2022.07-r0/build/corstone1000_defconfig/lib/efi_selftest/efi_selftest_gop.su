@@ -1,0 +1,3 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_selftest/efi_selftest_gop.c:44:12:teardown	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_selftest/efi_selftest_gop.c:54:12:execute	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_selftest/efi_selftest_gop.c:23:12:setup	32	static

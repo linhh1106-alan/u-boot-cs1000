@@ -1,0 +1,15 @@
+PN: u-boot
+PE: 1
+PV: 2022.07
+PR: r0
+PKGE: 1
+PKGV: 2022.07
+PKGR: r0
+LICENSE: GPL-2.0-or-later
+DESCRIPTION: U-Boot, a boot loader for Embedded boards based on PowerPC, ARM, MIPS and several other processors, which can be installed in a boot ROM and used to initialize and test the hardware or to download and run application code.
+SUMMARY: Universal Boot Loader for embedded devices
+SECTION: bootloaders
+PKG:u-boot-extlinux: u-boot-extlinux
+FILES:u-boot-extlinux: /boot/extlinux/extlinux.conf
+FILES_INFO:u-boot-extlinux: {}
+PKGSIZE:u-boot-extlinux: 0

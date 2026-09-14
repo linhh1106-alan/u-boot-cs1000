@@ -1,0 +1,6 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/core/dump.c:13:13:show_devices	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/core/dump.c:48:6:dm_dump_all	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/core/dump.c:77:6:dm_dump_uclass	96	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/core/dump.c:102:6:dm_dump_driver_compat	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/core/dump.c:126:6:dm_dump_drivers	96	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/core/dump.c:165:6:dm_dump_static_driver_info	48	static

@@ -1,0 +1,2 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/mmc/mmc_bootdev.c:14:12:mmc_get_bootflow	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/mmc/mmc_bootdev.c:38:12:mmc_bootdev_bind	16	static

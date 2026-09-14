@@ -1,0 +1,17 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:45:27:phy_get_counts	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:84:12:phy_uclass_pre_probe	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:93:12:phy_uclass_pre_remove	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:122:5:generic_phy_get_by_index_nodev	144	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:187:5:generic_phy_get_by_index	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:193:5:generic_phy_get_by_name	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:209:5:generic_phy_init	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:237:5:generic_phy_reset	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:255:5:generic_phy_exit	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:285:5:generic_phy_power_on	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:313:5:generic_phy_power_off	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:343:5:generic_phy_configure	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:354:5:generic_phy_get_bulk	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:392:5:generic_phy_init_bulk	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:414:5:generic_phy_exit_bulk	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:425:5:generic_phy_power_on_bulk	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/phy/phy-uclass.c:447:5:generic_phy_power_off_bulk	48	static

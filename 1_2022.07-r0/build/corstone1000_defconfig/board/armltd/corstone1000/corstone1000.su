@@ -1,0 +1,6 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/board/armltd/corstone1000/corstone1000.c:96:6:set_dfu_alt_info	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/board/armltd/corstone1000/corstone1000.c:100:5:board_init	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/board/armltd/corstone1000/corstone1000.c:105:5:dram_init	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/board/armltd/corstone1000/corstone1000.c:112:5:dram_init_banksize	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/board/armltd/corstone1000/corstone1000.c:123:5:board_eth_init	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/board/armltd/corstone1000/corstone1000.c:139:6:reset_cpu	0	static

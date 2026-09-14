@@ -1,0 +1,2 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/clk/clk_fixed_factor.c:26:14:clk_fixed_factor_get_rate	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/clk/clk_fixed_factor.c:44:12:clk_fixed_factor_of_to_plat	48	static

@@ -1,0 +1,13 @@
+PN: bsd-headers
+PV: 1.0
+PR: r0
+PKGV: 1.0
+PKGR: r0
+LICENSE: BSD-3-Clause & BSD-2-Clause
+DESCRIPTION: BSD compatible headers.
+SUMMARY: BSD compatible headers
+SECTION: devel
+PKG:bsd-headers-locale: bsd-headers-locale
+FILES:bsd-headers-locale: /usr/share/locale
+FILES_INFO:bsd-headers-locale: {}
+PKGSIZE:bsd-headers-locale: 0

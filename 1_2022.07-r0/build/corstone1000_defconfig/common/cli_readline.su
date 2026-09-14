@@ -1,0 +1,4 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/common/cli_readline.c:204:13:cread_add_char	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/common/cli_readline.c:26:14:delete_char	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/common/cli_readline.c:530:5:cli_readline_into_buffer	128	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/common/cli_readline.c:518:5:cli_readline	0	static

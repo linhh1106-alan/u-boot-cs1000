@@ -1,0 +1,2 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/cmd/bootz.c:16:12:bootz_setup	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/cmd/bootz.c:63:5:do_bootz	80	static

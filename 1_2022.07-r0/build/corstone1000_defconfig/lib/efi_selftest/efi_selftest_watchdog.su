@@ -1,0 +1,6 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_selftest/efi_selftest_watchdog.c:44:20:notify	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_selftest/efi_selftest_watchdog.c:131:12:teardown	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_selftest/efi_selftest_watchdog.c:171:12:execute	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_selftest/efi_selftest_watchdog.c:70:12:setup.constprop.isra	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_selftest/efi_selftest_watchdog.c:103:12:setup_timer	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_selftest/efi_selftest_watchdog.c:117:12:setup_reboot	0	static

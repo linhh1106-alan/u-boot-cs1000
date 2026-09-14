@@ -1,0 +1,97 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/work/poky/meta/recipes-core/musl/musl_git.bb:do_populate_sysroot', '/work/poky/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/work/poky/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/work/poky/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/work/poky/meta/recipes-kernel/kern-tools/kern-tools-native_git.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-connectivity/openssl/openssl_3.0.7.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/bison/bison_3.8.2.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/flex/flex_2.6.4.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/python/python3-setuptools_65.0.2.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/python/python3_3.10.6.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/swig/swig_4.0.2.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-extended/bc/bc_1.07.1.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-kernel/dtc/dtc_1.6.1.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-support/gnutls/gnutls_3.7.8.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['musl', 'gcc-cross-aarch64', 'gcc-runtime', 'quilt-native', 'kern-tools-native', 'openssl-native', 'bison-native', 'dwarfsrcfiles-native', 'flex-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'python3-setuptools-native', 'python3-native', 'rpm-native', 'swig-native', 'bc-native', 'dtc-native', 'gnutls-native', 'sqlite3-native', 'file-native', 'bzip2-native', 'libtool-native', 'xz-native', 'gettext-minimal-native', 'popt-native', 'lua-native', 'libgcrypt-native', 'elfutils-native', 'zstd-native', 'zlib-native', 'util-linux-libuuid-native', 'libffi-native', 'gdbm-native', 'libtirpc-native', 'readline-native', 'libnsl2-native', 'ncurses-native', 'libgcc', 'linux-libc-headers', 'libpcre-native', 'binutils-cross-aarch64', 'libmpc-native', 'gnu-config-native', 'texinfo-dummy-native', 'mpfr-native', 'gmp-native', 'perl-native', 'nettle-native', 'libidn2-native', 'libunistring-native', 'python3-wheel-native', 'python3-installer-native', 'python3-picobuild-native', 'm4-native', 'bsd-headers', 'libssp-nonshared', 'attr-native', 'libcap-native', 'libgpg-error-native', 'libarchive-native', 'curl-native', 'libmicrohttpd-native', 'make-native', 'python3-flit-core-native', 'unzip-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['gcc-runtime', 'musl', 'libgcc', 'linux-libc-headers', 'bsd-headers', 'libssp-nonshared']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: No locale files in this package
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg u-boot-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg u-boot-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg u-boot-locale libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg u-boot-extlinux libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg u-boot-env libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg u-boot-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg u-boot-dev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg u-boot-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg u-boot libs 0 bins 0 sonames []
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for u-boot-src
+DEBUG: LIBNAMES: pkg u-boot-src sonames set()
+DEBUG: calculating shlib provides for u-boot-dbg
+DEBUG: LIBNAMES: pkg u-boot-dbg sonames set()
+DEBUG: calculating shlib provides for u-boot-staticdev
+DEBUG: LIBNAMES: pkg u-boot-staticdev sonames set()
+DEBUG: calculating shlib provides for u-boot-dev
+DEBUG: LIBNAMES: pkg u-boot-dev sonames set()
+DEBUG: calculating shlib provides for u-boot-doc
+DEBUG: LIBNAMES: pkg u-boot-doc sonames set()
+DEBUG: calculating shlib provides for u-boot-locale
+DEBUG: LIBNAMES: pkg u-boot-locale sonames set()
+DEBUG: calculating shlib provides for u-boot-env
+DEBUG: LIBNAMES: pkg u-boot-env sonames set()
+DEBUG: calculating shlib provides for u-boot-extlinux
+DEBUG: LIBNAMES: pkg u-boot-extlinux sonames set()
+DEBUG: calculating shlib provides for u-boot
+DEBUG: LIBNAMES: pkg u-boot sonames set()
+DEBUG: calculating shlib requirements for u-boot-src
+DEBUG: calculating shlib requirements for u-boot-dbg
+DEBUG: calculating shlib requirements for u-boot-staticdev
+DEBUG: calculating shlib requirements for u-boot-dev
+DEBUG: calculating shlib requirements for u-boot-doc
+DEBUG: calculating shlib requirements for u-boot-locale
+DEBUG: calculating shlib requirements for u-boot-env
+DEBUG: calculating shlib requirements for u-boot-extlinux
+DEBUG: calculating shlib requirements for u-boot
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot' -e '/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native' -e '/work/build-cs1000/tmp/hosttools' | tee /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/work/build-cs1000/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Reported task c8a2855f274fd64632c2fa58ca898f9c60fbe783fcbe2e8d9560c4c66da837f5 as unihash c8a2855f274fd64632c2fa58ca898f9c60fbe783fcbe2e8d9560c4c66da837f5 to unix:///work/build-cs1000/hashserve.sock
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Executing python function uninative_changeinterp
+DEBUG: Python function uninative_changeinterp finished
+DEBUG: Python function sstate_task_postfunc finished

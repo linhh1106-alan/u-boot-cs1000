@@ -1,0 +1,4 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/cmd/fdt.c:848:12:is_printable_string	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/cmd/fdt.c:891:13:print_data.part.0	80	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/cmd/fdt.c:39:6:set_working_fdt_addr	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/cmd/fdt.c:113:12:do_fdt	160	static

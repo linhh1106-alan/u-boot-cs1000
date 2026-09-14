@@ -1,0 +1,11 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/rtc/rtc-uclass.c:15:5:dm_rtc_get	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/rtc/rtc-uclass.c:25:5:dm_rtc_set	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/rtc/rtc-uclass.c:35:5:dm_rtc_reset	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/rtc/rtc-uclass.c:45:5:dm_rtc_read	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/rtc/rtc-uclass.c:64:5:dm_rtc_write	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/rtc/rtc-uclass.c:83:5:rtc_read8	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/rtc/rtc-uclass.c:101:5:rtc_write8	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/rtc/rtc-uclass.c:116:5:rtc_read16	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/rtc/rtc-uclass.c:133:5:rtc_write16	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/rtc/rtc-uclass.c:146:5:rtc_read32	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/rtc/rtc-uclass.c:163:5:rtc_write32	48	static

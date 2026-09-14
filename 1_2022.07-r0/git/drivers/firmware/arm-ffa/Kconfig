@@ -1,0 +1,46 @@
+# SPDX-License-Identifier: GPL-2.0
+
+config ARM_FFA_TRANSPORT
+	bool "Enable Arm Firmware Framework for Armv8-A driver"
+	depends on DM && (ARM64 || SANDBOX)
+	select ARM_SMCCC if !SANDBOX
+	select CMD_ARMFFA
+	select LIB_UUID
+	select DEVRES
+	help
+	  The Firmware Framework for Arm A-profile processors (FF-A)
+	  describes interfaces (ABIs) that standardize communication
+	  between the Secure World and Normal World leveraging TrustZone
+	  technology.
+
+	  This driver is based on FF-A specification v1.0 and uses SMC32
+	  calling convention.
+
+	  FF-A specification:
+
+	  https://developer.arm.com/documentation/den0077/a/?lang=en
+
+	  In u-boot FF-A design, FF-A is considered as a discoverable bus.
+	  The Secure World is considered as one entity to communicate with
+	  using the FF-A bus.
+	  FF-A communication is handled by one device and one instance (the bus).
+	  This FF-A driver takes care of all the interactions between Normal world
+	  and Secure World.
+
+	  For more details about the FF-A driver, please refer to doc/README.ffa.drv
+
+config ARM_FFA_EFI_RUNTIME_MODE
+	bool "Enable EFI runtime support for FF-A data and code"
+	depends on ARM_FFA_TRANSPORT && EFI_LOADER
+	help
+	  Allows FF-A driver data structures and code to be accessible at EFI runtime.
+	  FF-A data is copied by ffa_copy_runtime_data function.
+	  The driver Code needed at runtime is placed at EFI runtime code section.
+	  Turning this on makes ffa_copy_runtime_data available for use and the driver
+	  code placed at EFI runtime code section.
+
+config SANDBOX_FFA
+	bool "FF-A Sandbox driver"
+	depends on ARM_FFA_TRANSPORT && SANDBOX
+	help
+	  This emulates the FF-A handling under Sandbox and allows to test the FF-A driver

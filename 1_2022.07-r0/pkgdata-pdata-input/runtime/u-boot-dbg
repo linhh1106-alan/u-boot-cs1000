@@ -1,0 +1,16 @@
+PN: u-boot
+PE: 1
+PV: 2022.07
+PR: r0
+PKGE: 1
+PKGV: 2022.07
+PKGR: r0
+LICENSE: GPL-2.0-or-later
+DESCRIPTION:u-boot-dbg: U-Boot, a boot loader for Embedded boards based on PowerPC, ARM, MIPS and several other processors, which can be installed in a boot ROM and used to initialize and test the hardware or to download and run application code.  This package contains ELF symbols and related sources for debugging purposes.
+SUMMARY:u-boot-dbg: Universal Boot Loader for embedded devices - Debugging files
+SECTION:u-boot-dbg: devel
+PKG:u-boot-dbg: u-boot-dbg
+ALLOW_EMPTY:u-boot-dbg: 1
+FILES:u-boot-dbg: /usr/lib/debug /usr/lib/debug-static /usr/src/debug
+FILES_INFO:u-boot-dbg: {}
+PKGSIZE:u-boot-dbg: 0

@@ -1,0 +1,27 @@
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_packagedata
+DEBUG: Executing python function package_get_auto_pr
+DEBUG: Python function package_get_auto_pr finished
+DEBUG: Executing shell function packagedata_translate_pr_autoinc
+DEBUG: Shell function packagedata_translate_pr_autoinc finished
+DEBUG: Python function do_packagedata finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Preparing tree /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/pkgdata-pdata-input for packaging at /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/sstate-build-packagedata/pkgdata-pdata-input
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/sstate-build-packagedata/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot' -e '/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native' -e '/work/build-cs1000/tmp/hosttools' | tee /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/sstate-build-packagedata/fixmepath | xargs --no-run-if-empty sed -i -e 's:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/work/build-cs1000/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Task d1aca75ac942b5b89358517a92166322ad6b87e0a5ed6961096390d08377f9be unihash changed d1aca75ac942b5b89358517a92166322ad6b87e0a5ed6961096390d08377f9be -> 44d9edf4c9c278d8589f821046efb2d3801a1ae0a6469e9f01a56c160bd9e94c by server unix:///work/build-cs1000/hashserve.sock
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Executing python function uninative_changeinterp
+DEBUG: Python function uninative_changeinterp finished
+DEBUG: Staging files from /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/pkgdata-pdata-input to /work/build-cs1000/tmp/pkgdata/corstone1000-fvp
+DEBUG: Python function sstate_task_postfunc finished

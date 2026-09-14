@@ -1,0 +1,2 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/arch/arm/cpu/armv8/exception_level.c:27:13:entry_non_secure	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/arch/arm/cpu/armv8/exception_level.c:44:6:switch_to_non_secure_mode	128	static

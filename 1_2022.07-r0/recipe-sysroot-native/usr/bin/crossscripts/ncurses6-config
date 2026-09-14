@@ -1,0 +1,4 @@
+#!/bin/sh
+echo 'ERROR: /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/bin/ncurses6-config should not be used, use an alternative such as pkg-config' >&2
+echo '--should-not-have-used-/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/bin/ncurses6-config'
+exit 1

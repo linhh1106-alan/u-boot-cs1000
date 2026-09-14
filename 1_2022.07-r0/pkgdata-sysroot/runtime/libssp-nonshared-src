@@ -1,0 +1,13 @@
+PN: libssp-nonshared
+PV: 1.0
+PR: r0
+PKGV: 1.0
+PKGR: r0
+LICENSE: BSD-3-Clause
+DESCRIPTION:libssp-nonshared-src: Minimal libssp_nonshared.a must needed for ssp to work with gcc on musl.  This package contains sources for debugging purposes.
+SUMMARY:libssp-nonshared-src: Minimal libssp_nonshared.a must needed for ssp to work with gcc on musl - Source files
+SECTION:libssp-nonshared-src: devel
+PKG:libssp-nonshared-src: libssp-nonshared-src
+FILES:libssp-nonshared-src: /usr/src/debug
+FILES_INFO:libssp-nonshared-src: {"/usr/src/debug/libssp-nonshared/1.0-r0/stack_chk.c": 1795}
+PKGSIZE:libssp-nonshared-src: 1795

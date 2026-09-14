@@ -1,0 +1,5 @@
+OEOuthashBasic
+14
+SSTATE_PKGSPEC=sstate:u-boot:corstone1000_fvp-poky-linux-musl:2022.07:r0:corstone1000_fvp:10:
+task=package_qa
+drwx                                                                                       .

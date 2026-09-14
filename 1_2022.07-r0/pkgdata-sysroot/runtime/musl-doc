@@ -1,0 +1,13 @@
+PN: musl
+PV: 1.2.3+gitAUTOINC+37e18b7bf3
+PR: r0
+PKGV: 1.2.3+git0+37e18b7bf3
+PKGR: r0
+LICENSE: MIT
+DESCRIPTION:musl-doc: A new standard library to power a new generation of Linux-based devices. musl is lightweight, fast, simple, free, and strives to be correct in the sense of standards-conformance and safety.  This package contains documentation.
+SUMMARY:musl-doc: An implementation of the standard library for Linux-based systems - Documentation files
+SECTION:musl-doc: doc
+PKG:musl-doc: musl-doc
+FILES:musl-doc: /usr/share/doc /usr/share/man /usr/share/info /usr/share/gtk-doc             /usr/share/gnome/help
+FILES_INFO:musl-doc: {}
+PKGSIZE:musl-doc: 0

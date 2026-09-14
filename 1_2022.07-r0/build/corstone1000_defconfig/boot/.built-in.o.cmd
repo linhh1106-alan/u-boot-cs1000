@@ -1,0 +1,1 @@
+cmd_boot/built-in.o :=  rm -f boot/built-in.o; aarch64-poky-linux-musl-ar cDPrsT boot/built-in.o boot/bootm.o boot/bootm_os.o boot/pxe_utils.o boot/image.o boot/image-board.o boot/bootdev-uclass.o boot/system_bootdev.o boot/bootflow.o boot/bootmeth-uclass.o boot/bootstd-uclass.o boot/bootmeth_distro.o boot/bootmeth_pxe.o boot/bootmeth_efi.o boot/image-fdt.o boot/image-fit.o

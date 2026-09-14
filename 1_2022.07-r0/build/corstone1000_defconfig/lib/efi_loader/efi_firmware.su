@@ -1,0 +1,7 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_firmware.c:152:21:efi_firmware_set_package_info_unsupported	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_firmware.c:135:21:efi_firmware_get_package_info_unsupported	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_firmware.c:120:21:efi_firmware_check_image_unsupported	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_firmware.c:107:21:efi_firmware_get_image_unsupported	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_firmware.c:393:21:efi_firmware_fit_set_image	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_firmware.c:441:21:efi_firmware_corstone1000_get_image_info	176	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_firmware.c:100:13:set_dfu_alt_info	0	static

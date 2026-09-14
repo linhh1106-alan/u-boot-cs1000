@@ -1,0 +1,19 @@
+PN: musl
+PV: 1.2.3+gitAUTOINC+37e18b7bf3
+PR: r0
+PKGV: 1.2.3+git0+37e18b7bf3
+PKGR: r0
+LICENSE: MIT
+DESCRIPTION: A new standard library to power a new generation of Linux-based devices. musl is lightweight, fast, simple, free, and strives to be correct in the sense of standards-conformance and safety.
+SUMMARY: An implementation of the standard library for Linux-based systems
+RPROVIDES:musl:  ldd rtld(GNU_HASH)
+SECTION: libs
+PKG:musl: musl
+FILES:musl: /usr/bin/* /usr/sbin/* /usr/libexec/* /usr/lib/lib*.so.*             /etc /com /var             /bin/* /sbin/*             /lib/*.so.*             /lib/udev /usr/lib/udev             /lib/udev /usr/lib/udev             /usr/share/musl /usr/lib/musl/*             /usr/share/pixmaps /usr/share/applications             /usr/share/idl /usr/share/omf /usr/share/sounds             /usr/lib/bonobo/servers /usr/lib/lib*.so /lib/ld-musl-aarch64.so.1 /etc/ld-musl-aarch64.path
+FILES_INFO:musl: {"/etc/ld-musl-aarch64.path": 14, "/lib/ld-musl-aarch64.so.1": 18, "/usr/bin/ldd": 14, "/usr/lib/libc.so": 723320}
+pkg_postinst:musl: #!/bin/sh\nset -e\nif [ x"$D" = "x" ]; then\n\tif [ -x /sbin/ldconfig ]; then /sbin/ldconfig ; fi\nfi\n
+FILERPROVIDESFLIST:musl: /usr/lib/libc.so
+FILERPROVIDES:/usr/lib/libc.so:musl:  libc.so()(64bit)
+FILERDEPENDSFLIST:musl: /usr/lib/libc.so
+FILERDEPENDS:/usr/lib/libc.so:musl:  rtld(GNU_HASH)
+PKGSIZE:musl: 723366

@@ -1,0 +1,3 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/arch/arm/cpu/armv8/cpu.c:30:6:sdelay	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/arch/arm/cpu/armv8/cpu.c:36:13:board_cleanup_before_linux	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/arch/arm/cpu/armv8/cpu.c:38:5:cleanup_before_linux	16	static

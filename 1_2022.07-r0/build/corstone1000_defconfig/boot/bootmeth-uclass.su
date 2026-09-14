@@ -1,0 +1,10 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootmeth-uclass.c:185:12:setup_fs	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootmeth-uclass.c:23:5:bootmeth_check	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootmeth-uclass.c:33:5:bootmeth_read_bootflow	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootmeth-uclass.c:43:5:bootmeth_boot	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootmeth-uclass.c:53:5:bootmeth_read_file	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootmeth-uclass.c:75:5:bootmeth_setup_iter_order	96	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootmeth-uclass.c:125:5:bootmeth_set_order	96	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootmeth-uclass.c:200:5:bootmeth_try_file	256	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootmeth-uclass.c:235:5:bootmeth_alloc_file	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootmeth-uclass.c:267:5:bootmeth_common_read_file	80	static

@@ -1,0 +1,19 @@
+OEOuthashBasic
+14
+bsd-headers: 877dafc6f2faca89f3edde9d7e07b560142a0ed8234d3298c581be6253f1480c
+gcc-runtime: ebcc286b6fe9e3e22ae838074a5921b2c92dba1a8d72608e15e6b6f34b2e6360
+libgcc: 423dcc3d7a090929dd73f9fdae2acfd7a6ea88e57204fa492c16c1e47ce100ff
+libssp-nonshared: c30809009a7916a27781629b419f781b673f08164e0b1421f0936dc044f32d13
+linux-libc-headers: 1f057d18a5d56eac04363af4a86dafd34896ecdea680fc2239d8bbb6721225f4
+musl: 5edcd86db79b9f28a797e25c1385ba46b0c81aaa3f9e0871b8f470422b4de7d6
+SSTATE_PKGSPEC=sstate:u-boot:corstone1000_fvp-poky-linux-musl:2022.07:r0:corstone1000_fvp:10:
+task=populate_sysroot
+drwx                                                                                       .
+drwx                                                                                       ./sysroot-destdir
+drwx                                                                                       ./sysroot-destdir/boot
+-rw-               737216 b550398806526fdd4a7978c3fb3d043877afe23dd54924df783917cf4d06d349 ./sysroot-destdir/boot/u-boot-EFI-2022.07-r0.bin
+lrwx                                                                                       ./sysroot-destdir/boot/u-boot.bin -> u-boot-EFI-2022.07-r0.bin
+lrwx                                                                                       ./sysroot-destdir/boot/u-boot.bin-EFI -> u-boot-EFI-2022.07-r0.bin
+drwx                                                                                       ./sysroot-destdir/sysroot-providers
+-rw-                    6 fdd9d7dafdf5d9f56032ef62548ba1d9b6752d0eca84e21556790a28be916329 ./sysroot-destdir/sysroot-providers/u-boot
+-rw-                    6 fdd9d7dafdf5d9f56032ef62548ba1d9b6752d0eca84e21556790a28be916329 ./sysroot-destdir/sysroot-providers/virtual_bootloader

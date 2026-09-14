@@ -1,0 +1,1 @@
+cmd_drivers/firmware/arm-ffa/built-in.o :=  rm -f drivers/firmware/arm-ffa/built-in.o; aarch64-poky-linux-musl-ar cDPrsT drivers/firmware/arm-ffa/built-in.o drivers/firmware/arm-ffa/arm-ffa-uclass.o drivers/firmware/arm-ffa/core.o drivers/firmware/arm-ffa/efi_ffa_runtime_data_mgr.o

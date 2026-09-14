@@ -1,0 +1,15 @@
+PN: bsd-headers
+PV: 1.0
+PR: r0
+PKGV: 1.0
+PKGR: r0
+LICENSE: BSD-3-Clause & BSD-2-Clause
+DESCRIPTION:bsd-headers-dbg: BSD compatible headers.  This package contains ELF symbols and related sources for debugging purposes.
+SUMMARY:bsd-headers-dbg: BSD compatible headers - Debugging files
+RRECOMMENDS:bsd-headers-dbg: bsd-headers-dev (= 1.0-r0)
+SECTION:bsd-headers-dbg: devel
+PKG:bsd-headers-dbg: bsd-headers-dbg
+ALLOW_EMPTY:bsd-headers-dbg: 1
+FILES:bsd-headers-dbg: /usr/lib/debug /usr/lib/debug-static /usr/src/debug
+FILES_INFO:bsd-headers-dbg: {}
+PKGSIZE:bsd-headers-dbg: 0

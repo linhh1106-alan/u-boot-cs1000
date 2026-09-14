@@ -1,0 +1,7 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/mmc/arm_pl180_mmci.c:498:5:arm_pl180_mmc_bind	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/mmc/arm_pl180_mmci.c:520:12:dm_mmc_getcd	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/mmc/arm_pl180_mmci.c:537:12:arm_pl180_mmc_of_to_plat	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/mmc/arm_pl180_mmci.c:433:12:arm_pl180_mmc_probe	112	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/mmc/arm_pl180_mmci.c:79:12:do_command	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/mmc/arm_pl180_mmci.c:505:12:dm_host_request	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/mmc/arm_pl180_mmci.c:513:12:dm_host_set_ios	32	static

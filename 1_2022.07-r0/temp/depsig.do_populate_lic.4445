@@ -1,0 +1,10 @@
+OEOuthashBasic
+14
+SSTATE_PKGSPEC=sstate:u-boot::2022.07:r0::10:
+task=populate_lic
+drwx                                                                                       .
+drwx                                                                                       ./license-destdir
+drwx                                                                                       ./license-destdir/u-boot
+-rw-                 7288 79feed9f3865276aa9acb7fdc5ea2aba63d2f2502eda0327c10af03c8f639db2 ./license-destdir/u-boot/README
+-rw-                17622 606aa26338f69ce178f1cbc648b7574aec4b5bbaeb20f4df36ff49010cb8fbbd ./license-destdir/u-boot/generic_GPL-2.0-or-later
+-rw-                   45 d2f547435b235e3fdba8f298ad4eb24429d22f84b3c2e1ef4fa31e1fe6ed7399 ./license-destdir/u-boot/recipeinfo

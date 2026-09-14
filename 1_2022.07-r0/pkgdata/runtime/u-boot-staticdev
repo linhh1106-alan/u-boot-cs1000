@@ -1,0 +1,16 @@
+PN: u-boot
+PE: 1
+PV: 2022.07
+PR: r0
+PKGE: 1
+PKGV: 2022.07
+PKGR: r0@EXTENDPRAUTO@
+LICENSE: GPL-2.0-or-later
+DESCRIPTION:u-boot-staticdev: U-Boot, a boot loader for Embedded boards based on PowerPC, ARM, MIPS and several other processors, which can be installed in a boot ROM and used to initialize and test the hardware or to download and run application code.  This package contains static libraries for software development.
+SUMMARY:u-boot-staticdev: Universal Boot Loader for embedded devices - Development files (Static Libraries)
+RDEPENDS:u-boot-staticdev: u-boot-dev (= 1:2022.07-r0@EXTENDPRAUTO@)
+SECTION:u-boot-staticdev: devel
+PKG:u-boot-staticdev: u-boot-staticdev
+FILES:u-boot-staticdev: /usr/lib/*.a /lib/*.a /usr/lib/u-boot/*.a
+FILES_INFO:u-boot-staticdev: {}
+PKGSIZE:u-boot-staticdev: 0

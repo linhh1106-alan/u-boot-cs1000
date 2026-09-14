@@ -1,0 +1,14 @@
+PN: musl
+PV: 1.2.3+gitAUTOINC+37e18b7bf3
+PR: r0
+PKGV: 1.2.3+git0+37e18b7bf3
+PKGR: r0
+LICENSE: MIT
+DESCRIPTION:musl-dbg: A new standard library to power a new generation of Linux-based devices. musl is lightweight, fast, simple, free, and strives to be correct in the sense of standards-conformance and safety.  This package contains ELF symbols and related sources for debugging purposes.
+SUMMARY:musl-dbg: An implementation of the standard library for Linux-based systems - Debugging files
+SECTION:musl-dbg: devel
+PKG:musl-dbg: musl-dbg
+ALLOW_EMPTY:musl-dbg: 1
+FILES:musl-dbg: /usr/lib/debug /usr/lib/debug-static /usr/src/debug
+FILES_INFO:musl-dbg: {"/usr/lib/.debug/libc.so": 3096472}
+PKGSIZE:musl-dbg: 3096472

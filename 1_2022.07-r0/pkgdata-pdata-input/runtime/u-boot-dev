@@ -1,0 +1,17 @@
+PN: u-boot
+PE: 1
+PV: 2022.07
+PR: r0
+PKGE: 1
+PKGV: 2022.07
+PKGR: r0
+LICENSE: GPL-2.0-or-later
+DESCRIPTION:u-boot-dev: U-Boot, a boot loader for Embedded boards based on PowerPC, ARM, MIPS and several other processors, which can be installed in a boot ROM and used to initialize and test the hardware or to download and run application code.  This package contains symbolic links, header files, and related items necessary for software development.
+SUMMARY:u-boot-dev: Universal Boot Loader for embedded devices - Development files
+RRECOMMENDS:u-boot-dev: u-boot (= 1:2022.07-r0) u-boot-env-dev
+SECTION:u-boot-dev: devel
+PKG:u-boot-dev: u-boot-dev
+ALLOW_EMPTY:u-boot-dev: 1
+FILES:u-boot-dev: /usr/include /lib/lib*.so /usr/lib/lib*.so /usr/lib/*.la                 /usr/lib/*.o /usr/lib/pkgconfig /usr/share/pkgconfig                 /usr/share/aclocal /lib/*.o                 /usr/lib/u-boot/*.la /lib/*.la                 /usr/lib/cmake /usr/share/cmake
+FILES_INFO:u-boot-dev: {}
+PKGSIZE:u-boot-dev: 0

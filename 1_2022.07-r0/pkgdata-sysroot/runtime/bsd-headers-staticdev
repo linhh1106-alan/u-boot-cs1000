@@ -1,0 +1,14 @@
+PN: bsd-headers
+PV: 1.0
+PR: r0
+PKGV: 1.0
+PKGR: r0
+LICENSE: BSD-3-Clause & BSD-2-Clause
+DESCRIPTION:bsd-headers-staticdev: BSD compatible headers.  This package contains static libraries for software development.
+SUMMARY:bsd-headers-staticdev: BSD compatible headers - Development files (Static Libraries)
+RDEPENDS:bsd-headers-staticdev: bsd-headers-dev (= 1.0-r0)
+SECTION:bsd-headers-staticdev: devel
+PKG:bsd-headers-staticdev: bsd-headers-staticdev
+FILES:bsd-headers-staticdev: /usr/lib/*.a /lib/*.a /usr/lib/bsd-headers/*.a
+FILES_INFO:bsd-headers-staticdev: {}
+PKGSIZE:bsd-headers-staticdev: 0

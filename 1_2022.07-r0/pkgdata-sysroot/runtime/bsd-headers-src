@@ -1,0 +1,13 @@
+PN: bsd-headers
+PV: 1.0
+PR: r0
+PKGV: 1.0
+PKGR: r0
+LICENSE: BSD-3-Clause & BSD-2-Clause
+DESCRIPTION:bsd-headers-src: BSD compatible headers.  This package contains sources for debugging purposes.
+SUMMARY:bsd-headers-src: BSD compatible headers - Source files
+SECTION:bsd-headers-src: devel
+PKG:bsd-headers-src: bsd-headers-src
+FILES:bsd-headers-src: /usr/src/debug
+FILES_INFO:bsd-headers-src: {}
+PKGSIZE:bsd-headers-src: 0

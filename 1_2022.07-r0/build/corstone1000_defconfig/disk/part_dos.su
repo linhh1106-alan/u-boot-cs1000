@@ -1,0 +1,8 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/disk/part_dos.c:65:12:test_block_type	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/disk/part_dos.c:103:12:part_test_dos	48	dynamic
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/disk/part_dos.c:206:12:part_get_info_extended	96	dynamic
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/disk/part_dos.c:312:27:part_get_info_dos	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/disk/part_dos.c:135:13:print_partition_extended	112	dynamic
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/disk/part_dos.c:306:28:part_print_dos	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/disk/part_dos.c:318:5:is_valid_dos_buf	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/disk/part_dos.c:495:5:write_mbr_sector	48	static

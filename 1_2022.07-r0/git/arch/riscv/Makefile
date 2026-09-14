@@ -1,0 +1,46 @@
+# SPDX-License-Identifier: GPL-2.0+
+#
+# Copyright (C) 2017 Andes Technology Corporation.
+# Rick Chen, Andes Technology Corporation <rick@andestech.com>
+
+ifeq ($(CONFIG_ARCH_RV64I),y)
+	ARCH_BASE = rv64im
+	ABI = lp64d
+	ARCH_D = d
+	ARCH_F = f
+endif
+ifeq ($(CONFIG_ARCH_RV32I),y)
+	ARCH_BASE = rv32im
+	ABI = ilp32d
+	ARCH_D = d
+	ARCH_F = f
+endif
+ifeq ($(CONFIG_RISCV_ISA_A),y)
+	ARCH_A = a
+endif
+ifeq ($(CONFIG_RISCV_ISA_C),y)
+	ARCH_C = c
+endif
+ifeq ($(CONFIG_CMODEL_MEDLOW),y)
+	CMODEL = medlow
+endif
+ifeq ($(CONFIG_CMODEL_MEDANY),y)
+	CMODEL = medany
+endif
+
+# Newer binutils versions default to ISA spec version 20191213 which moves some
+# instructions from the I extension to the Zicsr and Zifencei extensions.
+toolchain-need-zicsr-zifencei := $(call cc-option-yn, -march=$(ARCH_BASE)$(ARCH_A)$(ARCH_F)$(ARCH_D)$(ARCH_C)_zicsr_zifencei)
+zicsr_zifencei-$(toolchain-need-zicsr-zifencei) := _zicsr_zifencei
+
+ARCH_FLAGS = -march=$(ARCH_BASE)$(ARCH_A)$(ARCH_F)$(ARCH_D)$(ARCH_C)$(zicsr_zifencei-y) -mabi=$(ABI) \
+	     -mcmodel=$(CMODEL)
+
+PLATFORM_CPPFLAGS	+= $(ARCH_FLAGS)
+CFLAGS_EFI		+= $(ARCH_FLAGS)
+
+head-y := arch/riscv/cpu/start.o
+
+libs-y += arch/riscv/cpu/
+libs-y += arch/riscv/cpu/$(CPU)/
+libs-y += arch/riscv/lib/

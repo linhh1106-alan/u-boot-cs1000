@@ -1,0 +1,17 @@
+PN: u-boot
+PE: 1
+PV: 2022.07
+PR: r0
+PKGE: 1
+PKGV: 2022.07
+PKGR: r0
+LICENSE: GPL-2.0-or-later
+DESCRIPTION: U-Boot, a boot loader for Embedded boards based on PowerPC, ARM, MIPS and several other processors, which can be installed in a boot ROM and used to initialize and test the hardware or to download and run application code.
+SUMMARY: Universal Boot Loader for embedded devices
+RPROVIDES:u-boot-env:  u-boot-default-env
+SECTION: bootloaders
+PKG:u-boot-env: u-boot-env
+ALLOW_EMPTY:u-boot-env: 1
+FILES:u-boot-env:      /etc/u-boot-initial-env*     /etc/fw_env.config 
+FILES_INFO:u-boot-env: {"/etc/u-boot-initial-env": 50, "/etc/u-boot-initial-env-EFI": 50, "/etc/u-boot-initial-env-corstone1000-fvp-EFI": 50, "/etc/u-boot-initial-env-corstone1000-fvp-EFI-2022.07-r0": 3311}
+PKGSIZE:u-boot-env: 3461

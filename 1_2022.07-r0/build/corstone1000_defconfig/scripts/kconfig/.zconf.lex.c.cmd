@@ -1,0 +1,1 @@
+cmd_scripts/kconfig/zconf.lex.c := flex -oscripts/kconfig/zconf.lex.c -L /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/scripts/kconfig/zconf.l

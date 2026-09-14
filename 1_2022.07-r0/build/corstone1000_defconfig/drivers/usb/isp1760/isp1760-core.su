@@ -1,0 +1,3 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/usb/isp1760/isp1760-core.c:99:6:isp1760_set_pullup	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/usb/isp1760/isp1760-core.c:302:5:isp1760_register	96	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/usb/isp1760/isp1760-core.c:373:6:isp1760_unregister	0	static

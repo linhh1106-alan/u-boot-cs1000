@@ -1,0 +1,1 @@
+cmd_scripts/dtc/dtc-parser.tab.h := bison -o/dev/null --defines=scripts/dtc/dtc-parser.tab.h -t -l /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/scripts/dtc/dtc-parser.y

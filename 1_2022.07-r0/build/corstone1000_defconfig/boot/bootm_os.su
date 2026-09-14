@@ -1,0 +1,12 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm_os.c:491:12:do_bootm_efi	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm_os.c:45:13:copy_args	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm_os.c:139:12:do_bootm_rtems	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm_os.c:205:12:do_bootm_plan9	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm_os.c:366:12:do_bootm_qnxelf	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm_os.c:67:12:do_bootm_netbsd	96	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm_os.c:330:5:do_bootm_vxworks	112	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm_os.c:26:12:do_bootm_standalone	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm_os.c:579:13:arch_preboot_os	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm_os.c:585:13:board_preboot_os	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm_os.c:590:5:boot_selected_os	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootm_os.c:608:13:bootm_os_get_boot_func	0	static

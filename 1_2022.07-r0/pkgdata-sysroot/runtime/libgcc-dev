@@ -1,0 +1,16 @@
+PN: libgcc
+PV: 12.2.0
+PR: r0
+PKGV: 12.2.0
+PKGR: r0
+LICENSE:libgcc-dev: GPL-3.0-with-GCC-exception
+DESCRIPTION:libgcc-dev: The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go, and D, as well as libraries for these languages (libstdc++,...). GCC was originally written as the compiler for the GNU operating system.  This package contains symbolic links, header files, and related items necessary for software development.
+SUMMARY:libgcc-dev: GNU cc and gcc C compilers - Development files
+RPROVIDES:libgcc-dev:  libgcc-dev (=12.2.0)
+RRECOMMENDS:libgcc-dev: libgcc (= 12.2.0-r0) musl-dev
+SECTION:libgcc-dev: devel
+PKG:libgcc-dev: libgcc-s-dev
+ALLOW_EMPTY:libgcc-dev: 1
+FILES:libgcc-dev:     /lib/libgcc*.so     /usr/lib/aarch64-poky-linux     /usr/lib/aarch64-poky-linux-musl/12.2.0*     /usr/lib/aarch64-poky* 
+FILES_INFO:libgcc-dev: {"/lib/libgcc_s.so": 132, "/usr/lib/aarch64-poky-linux-musl/12.2.0/crtbegin.o": 4976, "/usr/lib/aarch64-poky-linux-musl/12.2.0/crtbeginS.o": 5240, "/usr/lib/aarch64-poky-linux-musl/12.2.0/crtbeginT.o": 4976, "/usr/lib/aarch64-poky-linux-musl/12.2.0/crtend.o": 1392, "/usr/lib/aarch64-poky-linux-musl/12.2.0/crtendS.o": 1392, "/usr/lib/aarch64-poky-linux-musl/12.2.0/crtfastmath.o": 3888, "/usr/lib/aarch64-poky-linux-musl/12.2.0/libgcc.a": 1276470, "/usr/lib/aarch64-poky-linux-musl/12.2.0/libgcc_eh.a": 332252, "/usr/lib/aarch64-poky-linux-musl/12.2.0/libgcov.a": 396344}
+PKGSIZE:libgcc-dev: 2027062

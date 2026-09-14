@@ -1,0 +1,160 @@
+Arm FF-A Driver
+====================
+
+Introduction
+--------------------
+
+FF-A stands for Firmware Framework for Arm A-profile processors.
+
+FF-A specifies interfaces that enable a pair of software sandboxes to communicate with each other. A sandbox aka partition could
+be a VM in the Normal or Secure world, an application in S-EL0, or a Trusted OS in S-EL1.
+
+This FF-A driver implements the interfaces to communicate with partitions in the Secure world aka Secure partitions (SPs).
+
+The driver specifically focuses on communicating with SPs that isolate portions of EFI runtime services that must run in a
+protected environment which is inaccessible by the Host OS or Hypervisor. Examples of such services are set/get variables.
+
+FF-A driver uses the SMC ABIs defined by the FF-A specification to:
+
+- Discover the presence of SPs of interest.
+- Access an SP's service through communication protocols e.g. EFI MM communication protocol.
+
+FF-A and SMC specifications
+-------------------------------------------
+
+The current implementation of the driver relies on FF-A specification v1.0 and uses SMC32 calling convention.
+
+The driver has been tested with Optee OS which supports SMC32 for most of the SMC ABIs.
+
+For more details please refer to: https://developer.arm.com/documentation/den0077/a/?lang=en
+
+The FF-A driver uses 64-bit registers as per SMCCCv1.2 specification.
+
+For more details please refer to: https://documentation-service.arm.com/static/5f8edaeff86e16515cdbe4c6?token=
+
+Supported hardware
+--------------------------------
+
+Aarch64 plaforms
+
+Configuration
+----------------------
+
+CONFIG_ARM_FFA_TRANSPORT
+    Enables the FF-A bus driver. Turn this on if you want to use FF-A communication.
+
+CONFIG_ARM_FFA_EFI_RUNTIME_MODE
+    Optional config that enables EFI runtime support for FF-A data and code.
+    ffa_copy_runtime_data allows to copy the FF-A driver data structures to EFI runtime data section.
+    Turning the config on makes ffa_copy_runtime_data available for use and the driver code placed at EFI runtime code section.
+    Call ffa_copy_runtime_data at the event on which you want the FF-A data to be copied (example: at ExitBootServices).
+
+CONFIG_SANDBOX_FFA
+    Enables FF-A Sandbox driver. This emulates the FF-A ABIs handling under Sandbox and provides
+    functional tests for FF-A.
+
+FF-A ABIs under the hood
+---------------------------------------
+
+Invoking an FF-A ABI involves providing to the secure world/hypervisor the expected arguments from the ABI.
+
+The ABI arguments are stored in x0 to x7 registers. Then, an SMC instruction is executed.
+
+At the secure side level or hypervisor the ABI is handled at a higher exception level and the arguments are read and processed.
+
+The response is put back through x0 to x7 registers and control is giving back to the u-boot FF-A driver (non secure world).
+
+The driver reads the response and processes it accordingly.
+
+This methodology applies to all the FF-A ABIs in the driver.
+
+FF-A bus discovery in u-boot
+-------------------------------------------
+
+When CONFIG_ARM_FFA_TRANSPORT is enabled, the FF-A bus is automatically discovered at initcall level (after u-boot relocation).
+
+The function that triggers the discovery process is ffa_bus_discover.
+
+ffa_bus_discover creates, binds and probes the arm_ffa device using device_{bind, probe} APIs.
+
+When the device is probed, ffa_probe is called which tries to communicate with the secure world or hypervisor.
+
+The FF-A bus is usable when these checks succeed:
+
+- querying the FF-A framework version
+- querying from secure world the u-boot endpoint ID
+- querying from secure world the supported features of the specified FF-A calls
+- mapping the RX/TX buffers
+- querying from secure world all the partitions information
+
+Probing fails when any of these operations fail. The FF-A bus discovery succeeds when probing is successful.
+
+When discovery fails the arm_ffa device is destroyed.
+
+The bus driver layer
+------------------------------
+
+The driver comes on top of the SMCCC layer and is implemented in drivers/firmware/arm-ffa/core.c
+
+The driver provides the following features:
+
+- Support for the 32-bit version of the following ABIs:
+
+FFA_VERSION
+FFA_ID_GET
+FFA_FEATURES
+FFA_PARTITION_INFO_GET
+FFA_RXTX_UNMAP
+FFA_RX_RELEASE
+FFA_RUN
+FFA_ERROR
+FFA_SUCCESS
+FFA_INTERRUPT
+
+- Support for the 64-bit version of the following ABIs:
+
+FFA_RXTX_MAP
+FFA_MSG_SEND_DIRECT_REQ
+FFA_MSG_SEND_DIRECT_RESP
+
+- Processing the received data from the secure world/hypervisor and caching it
+
+- Hiding from upper layers the FF-A protocol and registers details. Upper layers focus on exchanged data,
+the driver takes care of how to transport that to the secure world/hypervisor using FF-A.
+
+- The driver provides callbacks to be used by clients to access the FF-A bus:
+
+partition_info_get
+sync_send_receive
+rxtx_unmap
+
+- FF-A bus discovery at initcalls level (after u-boot relocation). The bus is up and running if the FF-A framework is responsive and compatible with the driver.
+
+- When EFI is enabled, unmap the RX/TX buffers at ExitBootServices() level.
+
+- When CONFIG_ARM_FFA_EFI_RUNTIME_MODE enabled, ffa_copy_runtime_data function is available for use.
+
+Using armffa command
+-----------------------------------
+
+armffa is a command showcasing how to use the FF-A driver and how to invoke its operations.
+
+This provides a guidance to the client developers on how to call the FF-A bus interfaces.
+
+Usage:
+
+armffa <sub-command> <arguments>
+
+sub-commands:
+
+        getpart <partition UUID>
+
+            lists the partition(s) info
+
+        ping <partition ID>
+
+            sends a data pattern to the specified partition
+
+        devlist
+
+            displays the arm_ffa device info

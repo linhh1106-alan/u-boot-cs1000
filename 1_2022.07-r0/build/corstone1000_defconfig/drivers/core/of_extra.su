@@ -1,0 +1,5 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/core/of_extra.c:14:5:ofnode_read_fmap_entry	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/core/of_extra.c:55:5:ofnode_decode_region	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/core/of_extra.c:76:5:ofnode_decode_memory_region	160	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/core/of_extra.c:136:6:ofnode_phy_is_fixed_link	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/core/of_extra.c:159:6:ofnode_eth_uses_inband_aneg	16	static

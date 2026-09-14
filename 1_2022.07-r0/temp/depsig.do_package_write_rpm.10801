@@ -1,0 +1,11 @@
+OEOuthashBasic
+14
+SSTATE_PKGSPEC=sstate:u-boot:corstone1000_fvp-poky-linux-musl:2022.07:r0:corstone1000_fvp:10:
+task=package_write_rpm
+drwx                                                                                       .
+drwx                                                                                       ./deploy-rpms
+drwx                                                                                       ./deploy-rpms/corstone1000_fvp
+-rw-               299404 2c79524c0394468d0df74faf7e6978180cdde9b532106041e9fd8dd4fb6fea9e ./deploy-rpms/corstone1000_fvp/u-boot-2022.07-r0.corstone1000_fvp.rpm
+-rw-                 6073 8ea149eeb050eb90a32fe23efd3a7d351e88f104eb852b0d09774743486629a0 ./deploy-rpms/corstone1000_fvp/u-boot-dbg-2022.07-r0.corstone1000_fvp.rpm
+-rw-                 6193 900ba6f7342c86b743ab98370d0cb0b6d94d2bbba085dd7027fad79e6fbc61bd ./deploy-rpms/corstone1000_fvp/u-boot-dev-2022.07-r0.corstone1000_fvp.rpm
+-rw-                 8139 b3ef9cc2bbbb4f12ef628e5e4d6b7af9c486ab494b3e4ec33b85f97f674c0017 ./deploy-rpms/corstone1000_fvp/u-boot-env-2022.07-r0.corstone1000_fvp.rpm

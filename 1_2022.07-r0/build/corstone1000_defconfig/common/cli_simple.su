@@ -1,0 +1,5 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/common/cli_simple.c:26:5:cli_simple_parse_line	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/common/cli_simple.c:63:5:cli_simple_process_macros	608	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/common/cli_simple.c:183:5:cli_simple_run_command	1600	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/common/cli_simple.c:269:6:cli_simple_loop	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/common/cli_simple.c:318:5:cli_simple_run_command_list	32	static

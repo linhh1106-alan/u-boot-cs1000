@@ -1,0 +1,8 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootstd-uclass.c:25:12:bootstd_of_to_plat	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootstd-uclass.c:100:12:bootstd_probe	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootstd-uclass.c:62:12:bootstd_remove	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootstd-uclass.c:73:26:bootstd_get_bootdev_order	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootstd-uclass.c:80:26:bootstd_get_prefixes	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootstd-uclass.c:87:5:bootstd_get_priv	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootstd-uclass.c:52:6:bootstd_clear_glob	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootstd-uclass.c:110:5:dm_scan_other	80	static

@@ -1,0 +1,13 @@
+PN: libssp-nonshared
+PV: 1.0
+PR: r0
+PKGV: 1.0
+PKGR: r0
+LICENSE: BSD-3-Clause
+DESCRIPTION:libssp-nonshared-doc: Minimal libssp_nonshared.a must needed for ssp to work with gcc on musl.  This package contains documentation.
+SUMMARY:libssp-nonshared-doc: Minimal libssp_nonshared.a must needed for ssp to work with gcc on musl - Documentation files
+SECTION:libssp-nonshared-doc: doc
+PKG:libssp-nonshared-doc: libssp-nonshared-doc
+FILES:libssp-nonshared-doc: /usr/share/doc /usr/share/man /usr/share/info /usr/share/gtk-doc             /usr/share/gnome/help
+FILES_INFO:libssp-nonshared-doc: {}
+PKGSIZE:libssp-nonshared-doc: 0

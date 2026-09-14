@@ -1,0 +1,10 @@
+DEBUG: Executing python function do_cleansstate
+NOTE: Removing /work/build-cs1000/sstate-cache/*/*/sstate:u-boot:corstone1000_fvp-poky-linux-musl:2022.07:r0:corstone1000_fvp:10:*_deploy.tar.zst*
+NOTE: Removing /work/build-cs1000/sstate-cache/*/*/sstate:u-boot:corstone1000_fvp-poky-linux-musl:2022.07:r0:corstone1000_fvp:10:*_deploy_source_date_epoch.tar.zst*
+NOTE: Removing /work/build-cs1000/sstate-cache/*/*/sstate:u-boot:corstone1000_fvp-poky-linux-musl:2022.07:r0:corstone1000_fvp:10:*_package.tar.zst*
+NOTE: Removing /work/build-cs1000/sstate-cache/*/*/sstate:u-boot:corstone1000_fvp-poky-linux-musl:2022.07:r0:corstone1000_fvp:10:*_package_qa.tar.zst*
+NOTE: Removing /work/build-cs1000/sstate-cache/*/*/sstate:u-boot:corstone1000_fvp-poky-linux-musl:2022.07:r0:corstone1000_fvp:10:*_package_write_rpm.tar.zst*
+NOTE: Removing /work/build-cs1000/sstate-cache/*/*/sstate:u-boot:corstone1000_fvp-poky-linux-musl:2022.07:r0:corstone1000_fvp:10:*_packagedata.tar.zst*
+NOTE: Removing /work/build-cs1000/sstate-cache/*/*/sstate:u-boot::2022.07:r0::10:*_populate_lic.tar.zst*
+NOTE: Removing /work/build-cs1000/sstate-cache/*/*/sstate:u-boot:corstone1000_fvp-poky-linux-musl:2022.07:r0:corstone1000_fvp:10:*_populate_sysroot.tar.zst*
+DEBUG: Python function do_cleansstate finished

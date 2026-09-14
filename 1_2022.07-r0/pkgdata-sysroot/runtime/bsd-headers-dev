@@ -1,0 +1,14 @@
+PN: bsd-headers
+PV: 1.0
+PR: r0
+PKGV: 1.0
+PKGR: r0
+LICENSE: BSD-3-Clause & BSD-2-Clause
+DESCRIPTION:bsd-headers-dev: BSD compatible headers.  This package contains symbolic links, header files, and related items necessary for software development.
+SUMMARY:bsd-headers-dev: BSD compatible headers - Development files
+SECTION:bsd-headers-dev: devel
+PKG:bsd-headers-dev: bsd-headers-dev
+ALLOW_EMPTY:bsd-headers-dev: 1
+FILES:bsd-headers-dev: /usr/include /lib/lib*.so /usr/lib/lib*.so /usr/lib/*.la                 /usr/lib/*.o /usr/lib/pkgconfig /usr/share/pkgconfig                 /usr/share/aclocal /lib/*.o                 /usr/lib/bsd-headers/*.la /lib/*.la                 /usr/lib/cmake /usr/share/cmake
+FILES_INFO:bsd-headers-dev: {"/usr/include/sys/cdefs.h": 539, "/usr/include/sys/queue.h": 30107, "/usr/include/sys/tree.h": 25768}
+PKGSIZE:bsd-headers-dev: 56414

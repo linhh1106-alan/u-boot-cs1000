@@ -1,0 +1,10 @@
+--- a/arch/arm/dts/corstone1000.dtsi
++++ b/arch/arm/dts/corstone1000.dtsi
+@@ -71,7 +71,7 @@
+ 			<0x1c02f000 0x2000>,
+ 			<0x1c04f000 0x1000>,
+ 			<0x1c06f000 0x2000>;
+-		interrupts = <GIC_PPI 9 (GIC_CPU_MASK_SIMPLE(1) |
++		interrupts = <GIC_PPI 9 (GIC_CPU_MASK_SIMPLE(4) |
+ 			      IRQ_TYPE_LEVEL_LOW)>;
+ 	};

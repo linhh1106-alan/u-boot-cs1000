@@ -1,0 +1,6 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootmeth_pxe.c:133:12:distro_pxe_boot	128	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootmeth_pxe.c:26:12:disto_pxe_getfile	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootmeth_pxe.c:108:12:distro_pxe_read_file	128	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootmeth_pxe.c:54:12:distro_pxe_read_bootflow	272	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootmeth_pxe.c:42:12:distro_pxe_check	0	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/boot/bootmeth_pxe.c:157:12:distro_bootmeth_pxe_bind	16	static

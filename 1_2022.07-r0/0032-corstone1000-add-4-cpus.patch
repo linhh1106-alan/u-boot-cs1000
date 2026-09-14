@@ -1,0 +1,33 @@
+--- a/arch/arm/dts/corstone1000.dtsi
++++ b/arch/arm/dts/corstone1000.dtsi
+@@ -31,6 +31,30 @@
+ 			reg = <0>;
+ 			next-level-cache = <&L2_0>;
+ 		};
++
++		cpu@1 {
++			device_type = "cpu";
++			compatible = "arm,cortex-a35";
++			reg = <1>;
++			enable-method = "psci";
++			next-level-cache = <&L2_0>;
++		};
++
++		cpu@2 {
++			device_type = "cpu";
++			compatible = "arm,cortex-a35";
++			reg = <2>;
++			enable-method = "psci";
++			next-level-cache = <&L2_0>;
++		};
++
++		cpu@3 {
++			device_type = "cpu";
++			compatible = "arm,cortex-a35";
++			reg = <3>;
++			enable-method = "psci";
++			next-level-cache = <&L2_0>;
++		};
+ 	};
+ 
+ 	memory@88200000 {

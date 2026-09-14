@@ -1,0 +1,40 @@
+OEOuthashBasic
+14
+SSTATE_PKGSPEC=sstate:u-boot:corstone1000_fvp-poky-linux-musl:2022.07:r0:corstone1000_fvp:10:
+task=packagedata
+drwx                                                                                       .
+drwx                                                                                       ./pkgdata-pdata-input
+-rw-                  119 6ec558c2ba000ae1668e6380367756c1fe8cb83928476f03339f8d0882b53a2c ./pkgdata-pdata-input/u-boot
+drwx                                                                                       ./pkgdata-pdata-input/extended
+-rw-                   42 56063a220acdf73c49a0473242c17a3d20357328850ab9a1bc5dee12d31b8aba ./pkgdata-pdata-input/extended/u-boot-dbg.json.zstd
+-rw-                   42 56063a220acdf73c49a0473242c17a3d20357328850ab9a1bc5dee12d31b8aba ./pkgdata-pdata-input/extended/u-boot-dev.json.zstd
+-rw-                   42 56063a220acdf73c49a0473242c17a3d20357328850ab9a1bc5dee12d31b8aba ./pkgdata-pdata-input/extended/u-boot-doc.json.zstd
+-rw-                  124 8b9a159a2bcdba583cea5cb2b23c34aead066676176cdc4c981524e0f52d7ab6 ./pkgdata-pdata-input/extended/u-boot-env.json.zstd
+-rw-                   42 56063a220acdf73c49a0473242c17a3d20357328850ab9a1bc5dee12d31b8aba ./pkgdata-pdata-input/extended/u-boot-extlinux.json.zstd
+-rw-                   42 56063a220acdf73c49a0473242c17a3d20357328850ab9a1bc5dee12d31b8aba ./pkgdata-pdata-input/extended/u-boot-locale.json.zstd
+-rw-                   42 56063a220acdf73c49a0473242c17a3d20357328850ab9a1bc5dee12d31b8aba ./pkgdata-pdata-input/extended/u-boot-src.json.zstd
+-rw-                   42 56063a220acdf73c49a0473242c17a3d20357328850ab9a1bc5dee12d31b8aba ./pkgdata-pdata-input/extended/u-boot-staticdev.json.zstd
+-rw-                  112 f5db56ae74caff009fab2b781b6e80a1e9e4a0b0ae1b9366d4f9aed3227cdbfb ./pkgdata-pdata-input/extended/u-boot.json.zstd
+drwx                                                                                       ./pkgdata-pdata-input/runtime
+-rw-                  618 2096320c42a826c0b22347582af825039874897c86cf979e8569a741614e4ea1 ./pkgdata-pdata-input/runtime/u-boot
+-rw-                  697 54e6e0fcadc1d0e66b7cc47045e599f0bec1838e1b2aba6e89ebc93cfb37a9cd ./pkgdata-pdata-input/runtime/u-boot-dbg
+-rw-                    0 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 ./pkgdata-pdata-input/runtime/u-boot-dbg.packaged
+-rw-                 1003 67fc94e5167c1bee006c57a5f0ac55533a84ed19e507d217da5d64b951dd6a78 ./pkgdata-pdata-input/runtime/u-boot-dev
+-rw-                    0 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 ./pkgdata-pdata-input/runtime/u-boot-dev.packaged
+-rw-                  679 afbf33bbef38f8743856b2ae9a584b535642d0fd5a29456a8bb847694cb94c81 ./pkgdata-pdata-input/runtime/u-boot-doc
+-rw-                  801 73c7f57d6f35bd0bad5686b1e125478046a248df23b8bd6561cccbb42657dfcd ./pkgdata-pdata-input/runtime/u-boot-env
+-rw-                    0 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 ./pkgdata-pdata-input/runtime/u-boot-env.packaged
+-rw-                  549 516ad8161b46b026d5dc3f5eab4077dbce67618107acf8d76d61673d70df969b ./pkgdata-pdata-input/runtime/u-boot-extlinux
+-rw-                  528 c03a1832f20a1d10607aa446490400fbde781c3e8021be9a6cc21cc0342ab3f1 ./pkgdata-pdata-input/runtime/u-boot-locale
+-rw-                  607 0bb872e62443840343cf069e416dad57bcda5c66af61737fb2e328e0990dcb04 ./pkgdata-pdata-input/runtime/u-boot-src
+-rw-                  772 3868292ee7122f13f5a02a5e8a08cfa0db39e33290369f6d6dbf064304519f78 ./pkgdata-pdata-input/runtime/u-boot-staticdev
+-rw-                    0 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 ./pkgdata-pdata-input/runtime/u-boot.packaged
+drwx                                                                                       ./pkgdata-pdata-input/runtime-reverse
+lrwx                                                                                       ./pkgdata-pdata-input/runtime-reverse/u-boot -> ../runtime/u-boot
+lrwx                                                                                       ./pkgdata-pdata-input/runtime-reverse/u-boot-dbg -> ../runtime/u-boot-dbg
+lrwx                                                                                       ./pkgdata-pdata-input/runtime-reverse/u-boot-dev -> ../runtime/u-boot-dev
+lrwx                                                                                       ./pkgdata-pdata-input/runtime-reverse/u-boot-env -> ../runtime/u-boot-env
+drwx                                                                                       ./pkgdata-pdata-input/runtime-rprovides
+drwx                                                                                       ./pkgdata-pdata-input/runtime-rprovides/u-boot-default-env
+lrwx                                                                                       ./pkgdata-pdata-input/runtime-rprovides/u-boot-default-env/u-boot-env -> ../../runtime/u-boot-env
+drwx                                                                                       ./pkgdata-pdata-input/shlibs2

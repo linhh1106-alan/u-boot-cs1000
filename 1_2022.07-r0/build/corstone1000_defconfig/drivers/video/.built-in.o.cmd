@@ -1,0 +1,1 @@
+cmd_drivers/video/built-in.o :=  rm -f drivers/video/built-in.o; aarch64-poky-linux-musl-ar cDPrsT drivers/video/built-in.o drivers/video/ti/built-in.o drivers/video/bridge/built-in.o drivers/video/sunxi/built-in.o

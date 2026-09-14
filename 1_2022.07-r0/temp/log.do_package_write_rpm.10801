@@ -1,0 +1,103 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['virtual:native:/work/poky/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['pseudo-native', 'rpm-native', 'libgcrypt-native', 'popt-native', 'libtool-native', 'elfutils-native', 'sqlite3-native', 'lua-native', 'xz-native', 'gettext-minimal-native', 'zstd-native', 'python3-native', 'file-native', 'bzip2-native', 'texinfo-dummy-native', 'libgpg-error-native', 'libcap-native', 'zlib-native', 'libmicrohttpd-native', 'libarchive-native', 'curl-native', 'readline-native', 'openssl-native', 'libnsl2-native', 'util-linux-libuuid-native', 'ncurses-native', 'gdbm-native', 'libtirpc-native', 'libffi-native', 'gnutls-native', 'perl-native', 'nettle-native', 'libunistring-native', 'gmp-native', 'libidn2-native', 'make-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package_write_rpm
+DEBUG: Executing python function read_subpackage_metadata
+DEBUG: Python function read_subpackage_metadata finished
+DEBUG: Executing python function do_package_rpm
+DEBUG: Executing python function write_specfile
+NOTE: Not creating empty RPM package for u-boot-src
+NOTE: Creating empty RPM package for u-boot-dbg
+NOTE: Not creating empty RPM package for u-boot-staticdev
+NOTE: Creating empty RPM package for u-boot-dev
+NOTE: Not creating empty RPM package for u-boot-doc
+NOTE: Not creating empty RPM package for u-boot-locale
+NOTE: Creating RPM package for u-boot-env
+NOTE: Not creating empty RPM package for u-boot-extlinux
+NOTE: Creating RPM package for u-boot
+DEBUG: Python function write_specfile finished
+DEBUG: PKGWRITEDIR: /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-rpms/corstone1000_fvp
+DEBUG: Executing shell function BUILDSPEC
+Building target platforms: corstone1000_fvp-poky-linux
+Building for target corstone1000_fvp-poky-linux
+Processing files: u-boot-2022.07-r0.corstone1000_fvp
+Finding  Provides: 
+Finding  Requires(interp): 
+Finding  Requires(rpmlib): 
+Finding  Requires(verify): 
+Finding  Requires(pre): 
+Finding  Requires(post): 
+Finding  Requires(preun): 
+Finding  Requires(postun): 
+Finding  Requires(pretrans): 
+Finding  Requires(posttrans): 
+Finding  Requires: 
+Finding  Conflicts: 
+Finding  Obsoletes: 
+Finding  Recommends: 
+Finding  Suggests: 
+Finding  Supplements: 
+Finding  Enhances: 
+Finding  OrderWithRequires: 
+Provides: u-boot = 1:2022.07-r0
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Processing files: u-boot-dbg-2022.07-r0.corstone1000_fvp
+Processing files: u-boot-dev-2022.07-r0.corstone1000_fvp
+Processing files: u-boot-env-2022.07-r0.corstone1000_fvp
+warning: Deprecated external dependency generator is used!
+Finding  Provides: 
+Finding  Requires(interp): 
+Finding  Requires(rpmlib): 
+Finding  Requires(verify): 
+Finding  Requires(pre): 
+Finding  Requires(post): 
+Finding  Requires(preun): 
+Finding  Requires(postun): 
+Finding  Requires(pretrans): 
+Finding  Requires(posttrans): 
+Finding  Requires: 
+Finding  Conflicts: 
+Finding  Obsoletes: 
+Finding  Recommends: 
+Finding  Suggests: 
+Finding  Supplements: 
+Finding  Enhances: 
+Finding  OrderWithRequires: 
+Provides: u-boot-default-env u-boot-env = 1:2022.07-r0
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Checking for unpackaged file(s): /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/bin/../../usr/lib/rpm/check-files /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/package
+warning: Deprecated external dependency generator is used!
+Wrote: /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-rpms/corstone1000_fvp/u-boot-dbg-2022.07-r0.corstone1000_fvp.rpm
+Wrote: /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-rpms/corstone1000_fvp/u-boot-dev-2022.07-r0.corstone1000_fvp.rpm
+Wrote: /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-rpms/corstone1000_fvp/u-boot-env-2022.07-r0.corstone1000_fvp.rpm
+Wrote: /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-rpms/corstone1000_fvp/u-boot-2022.07-r0.corstone1000_fvp.rpm
+
+RPM build warnings:
+    Deprecated external dependency generator is used!
+    Deprecated external dependency generator is used!
+DEBUG: Shell function BUILDSPEC finished
+DEBUG: Python function do_package_rpm finished
+DEBUG: Python function do_package_write_rpm finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Preparing tree /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-rpms for packaging at /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/sstate-build-package_write_rpm/deploy-rpms
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/sstate-build-package_write_rpm/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot' -e '/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native' -e '/work/build-cs1000/tmp/hosttools' | tee /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/sstate-build-package_write_rpm/fixmepath | xargs --no-run-if-empty sed -i -e 's:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/work/build-cs1000/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Reported task 67fd7d02481f557a5a7b05c5626973b8d665e3dc2db4fbbac6fcab86f9c84df5 as unihash 67fd7d02481f557a5a7b05c5626973b8d665e3dc2db4fbbac6fcab86f9c84df5 to unix:///work/build-cs1000/hashserve.sock
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Executing python function uninative_changeinterp
+DEBUG: Python function uninative_changeinterp finished
+DEBUG: Staging files from /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-rpms to /work/build-cs1000/tmp/deploy/rpm
+DEBUG: Python function sstate_task_postfunc finished

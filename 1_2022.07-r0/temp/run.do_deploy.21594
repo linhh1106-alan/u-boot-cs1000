@@ -1,0 +1,466 @@
+#!/bin/sh
+
+__BITBAKE_LAST_LINE=0
+
+# Emit a useful diagnostic if something fails:
+bb_sh_exit_handler() {
+    ret=$?
+    if [ "$ret" != 0 ]; then
+        echo "WARNING: exit code $ret from a shell command."
+    fi
+    exit $ret
+}
+
+bb_bash_exit_handler() {
+    ret=$?
+    { set +x; } > /dev/null
+    trap "" DEBUG
+    if [ "$ret" != 0 ]; then
+        echo "WARNING: ${BASH_SOURCE[0]}:${__BITBAKE_LAST_LINE} exit $ret from '$1'"
+
+        echo "WARNING: Backtrace (BB generated script): "
+        for i in $(seq 1 $((${#FUNCNAME[@]} - 1))); do
+            if [ "$i" -eq 1 ]; then
+                echo -e "	#$((i)): ${FUNCNAME[$i]}, ${BASH_SOURCE[$((i-1))]}, line ${__BITBAKE_LAST_LINE}"
+            else
+                echo -e "	#$((i)): ${FUNCNAME[$i]}, ${BASH_SOURCE[$((i-1))]}, line ${BASH_LINENO[$((i-1))]}"
+            fi
+        done
+    fi
+    exit $ret
+}
+
+bb_bash_debug_handler() {
+    local line=${BASH_LINENO[0]}
+    # For some reason the DEBUG trap trips with lineno=1 when scripts exit; ignore it
+    if [ "$line" -eq 1 ]; then
+        return
+    fi
+
+    # Track the line number of commands as they execute. This is so we can have access to the failing line number
+    # in the EXIT trap. See http://gnu-bash.2382.n7.nabble.com/trap-echo-quot-trap-exit-on-LINENO-quot-EXIT-gt-wrong-linenumber-td3666.html
+    if [ "${FUNCNAME[1]}" != "bb_bash_exit_handler" ]; then
+        __BITBAKE_LAST_LINE=$line
+    fi
+}
+
+case $BASH_VERSION in
+"") trap 'bb_sh_exit_handler' 0
+    set -e
+    ;;
+*)  trap 'bb_bash_exit_handler "$BASH_COMMAND"' 0
+    trap '{ bb_bash_debug_handler; } 2>/dev/null' DEBUG
+    set -e
+    shopt -s extdebug
+    ;;
+esac
+export AR="aarch64-poky-linux-musl-gcc-ar"
+export ARCH="arm64"
+export AS="aarch64-poky-linux-musl-as "
+export BUILD_AR="ar"
+export BUILD_AS="as "
+export BUILD_CC="gcc "
+export BUILD_CCLD="gcc "
+export BUILD_CFLAGS="-isystem/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/include -O2 -pipe"
+export BUILD_CPP="gcc  -E"
+export BUILD_CPPFLAGS="-isystem/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/include"
+export BUILD_CXX="g++ "
+export BUILD_CXXFLAGS="-isystem/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/include -O2 -pipe"
+export BUILD_FC="gfortran "
+export BUILD_LD="ld "
+export BUILD_LDFLAGS="-L/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/lib                         -L/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/lib                         -Wl,--enable-new-dtags                         -Wl,-rpath-link,/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/lib                         -Wl,-rpath-link,/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/lib                         -Wl,-rpath,/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/lib                         -Wl,-rpath,/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/lib                         -Wl,-O1 -Wl,--allow-shlib-undefined -Wl,--dynamic-linker=/work/build-cs1000/tmp/sysroots-uninative/aarch64-linux/lib/ld-linux-aarch64.so.1"
+export BUILD_NM="nm"
+export BUILD_RANLIB="ranlib -D"
+export BUILD_STRIP="strip"
+export CC="aarch64-poky-linux-musl-gcc  -mcpu=cortex-a35 -march=armv8-a+crc -fstack-protector-strong  -Os -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot"
+export CCLD="aarch64-poky-linux-musl-gcc  -mcpu=cortex-a35 -march=armv8-a+crc -fstack-protector-strong  -Os -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot"
+export CFLAGS=" -Os -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git=/usr/src/debug/u-boot/1_2022.07-r0  -fdebug-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git=/usr/src/debug/u-boot/1_2022.07-r0  -fmacro-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build=/usr/src/debug/u-boot/1_2022.07-r0  -fdebug-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build=/usr/src/debug/u-boot/1_2022.07-r0  -fdebug-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot=  -fmacro-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot=  -fdebug-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native=  -ffunction-sections -fdata-sections"
+export CPP="aarch64-poky-linux-musl-gcc -E --sysroot=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot  -mcpu=cortex-a35 -march=armv8-a+crc -fstack-protector-strong  -Os -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security"
+export CPPFLAGS=""
+export CXX="aarch64-poky-linux-musl-g++  -mcpu=cortex-a35 -march=armv8-a+crc -fstack-protector-strong  -Os -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot"
+export CXXFLAGS=" -Os -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git=/usr/src/debug/u-boot/1_2022.07-r0  -fdebug-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git=/usr/src/debug/u-boot/1_2022.07-r0  -fmacro-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build=/usr/src/debug/u-boot/1_2022.07-r0  -fdebug-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build=/usr/src/debug/u-boot/1_2022.07-r0  -fdebug-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot=  -fmacro-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot=  -fdebug-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native=  -fvisibility-inlines-hidden"
+export FC="aarch64-poky-linux-musl-gfortran  -mcpu=cortex-a35 -march=armv8-a+crc -fstack-protector-strong  -Os -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot"
+export GIT_CEILING_DIRECTORIES="/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0"
+export HOME="/home/builder"
+export LC_ALL="en_US.UTF-8"
+export LD="aarch64-poky-linux-musl-ld --sysroot=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot "
+export LDFLAGS="-Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git=/usr/src/debug/u-boot/1_2022.07-r0  -fdebug-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git=/usr/src/debug/u-boot/1_2022.07-r0  -fmacro-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build=/usr/src/debug/u-boot/1_2022.07-r0  -fdebug-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build=/usr/src/debug/u-boot/1_2022.07-r0  -fdebug-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot=  -fmacro-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot=  -fdebug-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -Wl,--gc-sections"
+export LOGNAME="builder"
+export MAKE="make"
+export NM="aarch64-poky-linux-musl-gcc-nm"
+export OBJCOPY="aarch64-poky-linux-musl-objcopy"
+export OBJDUMP="aarch64-poky-linux-musl-objdump"
+export OMP_NUM_THREADS="4"
+export PATH="/work/build-cs1000/tmp/sysroots-uninative/aarch64-linux/usr/bin:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/bin/python3-native:/work/poky/scripts:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/bin/aarch64-poky-linux-musl:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot/usr/bin/crossscripts:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/sbin:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/bin:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/sbin:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/bin:/work/poky/bitbake/bin:/work/build-cs1000/tmp/hosttools"
+export PERL_HASH_SEED="0"
+export PKG_CONFIG_DIR="/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot/usr/lib/pkgconfig"
+export PKG_CONFIG_DISABLE_UNINSTALLED="yes"
+export PKG_CONFIG_LIBDIR="/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot/usr/lib/pkgconfig"
+export PKG_CONFIG_PATH="/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot/usr/lib/pkgconfig:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot/usr/share/pkgconfig"
+export PKG_CONFIG_SYSROOT_DIR="/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot"
+export PKG_CONFIG_SYSTEM_INCLUDE_PATH="/usr/include"
+export PKG_CONFIG_SYSTEM_LIBRARY_PATH="/lib:/usr/lib"
+export PSEUDO_DISABLED="1"
+export PSEUDO_UNLOAD="1"
+export PYTHON="/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/bin/python3-native/python3"
+export PYTHONHASHSEED="0"
+export PYTHONNOUSERSITE="1"
+export PYTHON_INCLUDE_DIR="/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot/usr/include/python3.10"
+export PYTHON_LIBRARY="/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot/usr/lib/libpython3.10.so"
+export RANLIB="aarch64-poky-linux-musl-gcc-ranlib"
+export READELF="aarch64-poky-linux-musl-readelf"
+unset SHELL
+export SOURCE_DATE_EPOCH="1657546978"
+export SOURCE_DATE_EPOCH_FALLBACK="1302044400"
+export STAGING_INCDIR="/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot/usr/include"
+export STAGING_LIBDIR="/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot/usr/lib"
+export STRINGS="aarch64-poky-linux-musl-strings"
+export STRIP="aarch64-poky-linux-musl-strip"
+export TZ="UTC"
+export UBOOT_ARCH="arm64"
+export USER="builder"
+export base_bindir="/bin"
+export base_libdir="/lib"
+export base_prefix=""
+export base_sbindir="/sbin"
+export bindir="/usr/bin"
+export datadir="/usr/share"
+export docdir="/usr/share/doc"
+export exec_prefix="/usr"
+export includedir="/usr/include"
+export infodir="/usr/share/info"
+export libdir="/usr/lib"
+export libexecdir="/usr/libexec"
+export localstatedir="/var"
+export mandir="/usr/share/man"
+export nonarch_base_libdir="/lib"
+export nonarch_libdir="/usr/lib"
+export oldincludedir="/usr/include"
+export prefix="/usr"
+export sbindir="/usr/sbin"
+export servicedir="/srv"
+export sharedstatedir="/com"
+export sysconfdir="/etc"
+export systemd_system_unitdir="/lib/systemd/system"
+export systemd_unitdir="/lib/systemd"
+export systemd_user_unitdir="/usr/lib/systemd/user"
+
+# line: 212, file: /work/poky/meta/recipes-bsp/u-boot/u-boot.inc
+do_deploy() {
+	if [ "0" = "1" -a -n "u-boot.dtb" ] ; then
+		concat_dtb
+	fi
+
+	if [ "0" = "1" ] ; then
+	# Deploy the u-boot-nodtb binary and symlinks...
+		if [ -f "spl/u-boot-spl-nodtb.bin" ] ; then
+			echo "Copying u-boot-nodtb binary..."
+			install -m 0644 spl/u-boot-spl-nodtb.bin /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-spl-nodtb-corstone1000-fvp-2022.07-r0.bin
+			ln -sf u-boot-spl-nodtb-corstone1000-fvp-2022.07-r0.bin /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-spl-nodtb-corstone1000-fvp.bin
+			ln -sf u-boot-spl-nodtb-corstone1000-fvp-2022.07-r0.bin /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-spl-nodtb.bin
+		fi
+
+
+		# We only deploy the symlinks to the uboot-fitImage and uboot-its
+		# images, as the KERNEL_PN will take care of deploying the real file
+		ln -sf u-boot-fitImage-corstone1000-fvp-2022.07-r0 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-fitImage
+		ln -sf u-boot-fitImage-corstone1000-fvp-2022.07-r0 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-fitImage-corstone1000-fvp
+		ln -sf u-boot-its-corstone1000-fvp-2022.07-r0 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot.its
+		ln -sf u-boot-its-corstone1000-fvp-2022.07-r0 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-its-corstone1000-fvp
+	fi
+
+	if [ "0" = "1" -a -n "u-boot-spl.dtb" ] ; then
+		concat_spl_dtb
+	fi
+
+
+    if [ -n "EFI" ]
+    then
+        for config in  corstone1000_defconfig; do
+            i=$(expr $i + 1);
+            for type in EFI; do
+                j=$(expr $j + 1);
+                if [ $j -eq $i ]
+                then
+                    install -D -m 644 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build/${config}/u-boot-${type}.bin /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-${type}-2022.07-r0.bin
+                    cd /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot
+                    ln -sf u-boot-${type}-2022.07-r0.bin u-boot-corstone1000-fvp.bin-${type}
+                    ln -sf u-boot-${type}-2022.07-r0.bin u-boot-corstone1000-fvp.bin
+                    ln -sf u-boot-${type}-2022.07-r0.bin u-boot.bin-${type}
+                    ln -sf u-boot-${type}-2022.07-r0.bin u-boot.bin
+
+                    # Deploy the uboot-initial-env
+                    if [ -n "u-boot-initial-env" ]; then
+                        install -D -m 644 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build/${config}/u-boot-initial-env-${type} /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-initial-env-corstone1000-fvp-${type}-2022.07-r0
+                        cd /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot
+                        ln -sf u-boot-initial-env-corstone1000-fvp-${type}-2022.07-r0 u-boot-initial-env-corstone1000-fvp-${type}
+                        ln -sf u-boot-initial-env-corstone1000-fvp-${type}-2022.07-r0 u-boot-initial-env-${type}
+                    fi
+                fi
+            done
+            unset j
+        done
+        unset i
+    else
+        install -D -m 644 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build/u-boot.bin /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-corstone1000-fvp-2022.07-r0.bin
+
+        cd /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot
+        rm -f u-boot.bin u-boot-corstone1000-fvp.bin
+        ln -sf u-boot-corstone1000-fvp-2022.07-r0.bin u-boot-corstone1000-fvp.bin
+        ln -sf u-boot-corstone1000-fvp-2022.07-r0.bin u-boot.bin
+
+        # Deploy the uboot-initial-env
+        if [ -n "u-boot-initial-env" ]; then
+            install -D -m 644 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build/u-boot-initial-env /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-initial-env-corstone1000-fvp-2022.07-r0
+            cd /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot
+            ln -sf u-boot-initial-env-corstone1000-fvp-2022.07-r0 u-boot-initial-env-corstone1000-fvp
+            ln -sf u-boot-initial-env-corstone1000-fvp-2022.07-r0 u-boot-initial-env
+        fi
+    fi
+
+    if [ -e /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/fw_env.config ] ; then
+        install -D -m 644 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/fw_env.config /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/fw_env.config-corstone1000-fvp-2022.07-r0
+        cd /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot
+        ln -sf fw_env.config-corstone1000-fvp-2022.07-r0 fw_env.config-corstone1000-fvp
+        ln -sf fw_env.config-corstone1000-fvp-2022.07-r0 fw_env.config
+    fi
+
+    if [ -n "" ]
+    then
+        if [ -n "EFI" ]
+        then
+            for config in  corstone1000_defconfig; do
+                i=$(expr $i + 1);
+                for type in EFI; do
+                    j=$(expr $j + 1);
+                    if [ $j -eq $i ]
+                    then
+                        install -m 644 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build/${config}/ /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-${type}-2022.07-r0.elf
+                        ln -sf u-boot-${type}-2022.07-r0.elf /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot.elf-${type}
+                        ln -sf u-boot-${type}-2022.07-r0.elf /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot.elf
+                        ln -sf u-boot-${type}-2022.07-r0.elf /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-corstone1000-fvp.elf-${type}
+                        ln -sf u-boot-${type}-2022.07-r0.elf /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-corstone1000-fvp.elf
+                    fi
+                done
+                unset j
+            done
+            unset i
+        else
+            install -m 644 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build/ /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-corstone1000-fvp-2022.07-r0.elf
+            ln -sf u-boot-corstone1000-fvp-2022.07-r0.elf /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot.elf
+            ln -sf u-boot-corstone1000-fvp-2022.07-r0.elf /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-corstone1000-fvp.elf
+        fi
+    fi
+
+
+     if [ -n "" ]
+     then
+        if [ -n "EFI" ]
+        then
+            for config in  corstone1000_defconfig; do
+                i=$(expr $i + 1);
+                for type in EFI; do
+                    j=$(expr $j + 1);
+                    if [ $j -eq $i ]
+                    then
+                        install -m 644 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build/${config}/ /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/-${type}-2022.07-r0
+                        rm -f /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/ /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/-corstone1000-fvp
+                        ln -sf -${type}-2022.07-r0 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/-${type}
+                        ln -sf -${type}-2022.07-r0 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/
+                        ln -sf -${type}-2022.07-r0 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/-corstone1000-fvp-${type}
+                        ln -sf -${type}-2022.07-r0 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/-corstone1000-fvp
+                    fi
+                done
+                unset j
+            done
+            unset i
+        else
+            install -m 644 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build/ /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/-corstone1000-fvp-2022.07-r0
+            rm -f /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/ /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/-corstone1000-fvp
+            ln -sf -corstone1000-fvp-2022.07-r0 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/
+            ln -sf -corstone1000-fvp-2022.07-r0 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/-corstone1000-fvp
+        fi
+    fi
+
+
+    if [ -n "" ]
+    then
+        install -m 644 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/.txt /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/-corstone1000-fvp-2022.07-r0.txt
+        rm -f /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/.txt /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/-corstone1000-fvp.txt
+        ln -sf -corstone1000-fvp-2022.07-r0.txt /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/.txt
+        ln -sf -corstone1000-fvp-2022.07-r0.txt /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/-corstone1000-fvp.txt
+    fi
+
+    if [ "0" = "1" ]
+    then
+        install -m 644 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build/extlinux.conf /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/extlinux.conf-corstone1000-fvp-r0
+        ln -sf extlinux.conf-corstone1000-fvp-r0 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/extlinux.conf-corstone1000-fvp
+        ln -sf extlinux.conf-corstone1000-fvp-r0 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/extlinux.conf
+    fi
+
+    if [ -n "" ]
+    then
+        install -m 644 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build/arch/arm64/dts/u-boot.dtb /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/
+    fi
+	# If we're creating a u-boot fitImage, point u-boot.bin
+	# symlink since it might get used by image recipes
+	if [ "0" = "1" ] ; then
+		ln -sf u-boot-fitImage-corstone1000-fvp-2022.07-r0 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot.bin
+		ln -sf u-boot-fitImage-corstone1000-fvp-2022.07-r0 /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-corstone1000-fvp.bin
+	fi
+}
+
+# line: 185, file: /work/poky/meta/classes-recipe/uboot-sign.bbclass
+concat_dtb() {
+	if [ "0" = "1" -a "u-boot" = "u-boot" -a -n "u-boot.dtb" ]; then
+		mkdir -p /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot
+		if [ -n "EFI" ]; then
+			for config in  corstone1000_defconfig; do
+				CONFIG_B_PATH="$config"
+				cd /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build/$config
+				concat_dtb_helper
+			done
+		else
+			CONFIG_B_PATH=""
+			cd /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build
+			concat_dtb_helper
+		fi
+	fi
+}
+
+# line: 202, file: /work/poky/meta/classes-recipe/uboot-sign.bbclass
+concat_spl_dtb() {
+	if [ "0" = "1" -a "u-boot" = "u-boot" -a -n "u-boot-spl.dtb" ]; then
+		mkdir -p /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot
+		if [ -n "EFI" ]; then
+			for config in  corstone1000_defconfig; do
+				CONFIG_B_PATH="$config"
+				cd /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build/$config
+				concat_spl_dtb_helper
+			done
+		else
+			CONFIG_B_PATH=""
+			cd /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build
+			concat_spl_dtb_helper
+		fi
+	fi
+}
+
+# line: 119, file: /work/poky/meta/classes-recipe/uboot-sign.bbclass
+concat_dtb_helper() {
+	if [ -e "u-boot.dtb" ]; then
+		ln -sf u-boot-corstone1000-fvp-2022.07-r0.dtb /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot.dtb
+		ln -sf u-boot-corstone1000-fvp-2022.07-r0.dtb /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-corstone1000-fvp.dtb
+	fi
+
+	if [ -f "u-boot-nodtb.bin" ]; then
+		install u-boot-nodtb.bin /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-nodtb-corstone1000-fvp-2022.07-r0.bin
+		ln -sf u-boot-nodtb-corstone1000-fvp-2022.07-r0.bin /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-nodtb-corstone1000-fvp.bin
+		ln -sf u-boot-nodtb-corstone1000-fvp-2022.07-r0.bin /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-nodtb.bin
+	fi
+
+	# If we're not using a signed u-boot fit, concatenate SPL w/o DTB & U-Boot DTB
+	# with public key (otherwise it will be deployed by the equivalent
+	# concat_spl_dtb_helper function - cf. kernel-fitimage.bbclass for more details)
+	if [ "0" != "1" ] ; then
+		deployed_uboot_dtb_binary='/work/build-cs1000/tmp/deploy/images/corstone1000-fvp/u-boot-corstone1000-fvp-2022.07-r0.dtb'
+		if [ "xbin" = "ximg" -o "xbin" = "xrom" ] && \
+			[ -e "$deployed_uboot_dtb_binary" ]; then
+			oe_runmake EXT_DTB=$deployed_uboot_dtb_binary
+			install u-boot.bin /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-corstone1000-fvp-2022.07-r0.bin
+		elif [ -e "/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-nodtb-corstone1000-fvp-2022.07-r0.bin" -a -e "$deployed_uboot_dtb_binary" ]; then
+			cd /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot
+			cat u-boot-nodtb-corstone1000-fvp-2022.07-r0.bin $deployed_uboot_dtb_binary | tee /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build/${CONFIG_B_PATH}/u-boot.bin > u-boot-corstone1000-fvp-2022.07-r0.bin
+
+			if [ -n "EFI" ]
+			then
+				i=0
+				j=0
+				for config in  corstone1000_defconfig; do
+					i=$(expr $i + 1);
+					for type in EFI; do
+						j=$(expr $j + 1);
+						if [ $j -eq $i ]
+						then
+							cp u-boot-corstone1000-fvp-2022.07-r0.bin /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build/${CONFIG_B_PATH}/u-boot-$type.bin
+						fi
+					done
+				done
+			fi
+		else
+			bbwarn "Failure while adding public key to u-boot binary. Verified boot won't be available."
+		fi
+	fi
+}
+
+# line: 165, file: /work/poky/meta/classes-recipe/uboot-sign.bbclass
+concat_spl_dtb_helper() {
+
+	# We only deploy symlinks to the u-boot-spl.dtb,as the KERNEL_PN will
+	# be responsible for deploying the real file
+	if [ -e "spl/u-boot-spl.dtb" ] ; then
+		ln -sf u-boot-spl-corstone1000-fvp-2022.07-r0.dtb /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-spl-corstone1000-fvp.dtb
+		ln -sf u-boot-spl-corstone1000-fvp-2022.07-r0.dtb /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-spl.dtb
+	fi
+
+	# Concatenate the SPL nodtb binary and u-boot.dtb
+	deployed_spl_dtb_binary='/work/build-cs1000/tmp/deploy/images/corstone1000-fvp/u-boot-spl-corstone1000-fvp-2022.07-r0.dtb'
+	if [ -e "/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot/u-boot-spl-nodtb-corstone1000-fvp-2022.07-r0.bin" -a -e "$deployed_spl_dtb_binary" ] ; then
+		cd /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/deploy-u-boot
+		cat u-boot-spl-nodtb-corstone1000-fvp-2022.07-r0.bin $deployed_spl_dtb_binary | tee /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build/${CONFIG_B_PATH}/ > -corstone1000-fvp-2022.07-r0
+	else
+		bbwarn "Failure while adding public key to spl binary. Verified U-Boot boot won't be available."
+	fi
+}
+
+# line: 38, file: /work/poky/meta/classes-global/logging.bbclass
+bbwarn() {
+	if [ -p /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/temp/fifo.21594 ] ; then
+		printf "%b\0" "bbwarn $*" > /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/temp/fifo.21594
+	else
+		echo "WARNING: $*"
+	fi
+}
+
+# line: 64, file: /work/poky/meta/classes-global/base.bbclass
+oe_runmake() {
+	oe_runmake_call "$@" || die "oe_runmake failed"
+}
+
+# line: 55, file: /work/poky/meta/classes-global/base.bbclass
+die() {
+	bbfatal_log "$*"
+}
+
+# line: 59, file: /work/poky/meta/classes-global/base.bbclass
+oe_runmake_call() {
+	bbnote make CROSS_COMPILE=aarch64-poky-linux-musl- CC="aarch64-poky-linux-musl-gcc  --sysroot=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot" V=1 HOSTCC="gcc  -isystem/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/include -O2 -pipe -L/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/lib                         -L/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/lib                         -Wl,--enable-new-dtags                         -Wl,-rpath-link,/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/lib                         -Wl,-rpath-link,/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/lib                         -Wl,-rpath,/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/lib                         -Wl,-rpath,/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/lib                         -Wl,-O1 -Wl,--allow-shlib-undefined -Wl,--dynamic-linker=/work/build-cs1000/tmp/sysroots-uninative/aarch64-linux/lib/ld-linux-aarch64.so.1" STAGING_INCDIR=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/include STAGING_LIBDIR=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/lib DEVICE_TREE=corstone1000-fvp "$@"
+	make CROSS_COMPILE=aarch64-poky-linux-musl- CC="aarch64-poky-linux-musl-gcc  --sysroot=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot" V=1 HOSTCC="gcc  -isystem/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/include -O2 -pipe -L/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/lib                         -L/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/lib                         -Wl,--enable-new-dtags                         -Wl,-rpath-link,/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/lib                         -Wl,-rpath-link,/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/lib                         -Wl,-rpath,/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/lib                         -Wl,-rpath,/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/lib                         -Wl,-O1 -Wl,--allow-shlib-undefined -Wl,--dynamic-linker=/work/build-cs1000/tmp/sysroots-uninative/aarch64-linux/lib/ld-linux-aarch64.so.1" STAGING_INCDIR=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/include STAGING_LIBDIR=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/lib DEVICE_TREE=corstone1000-fvp "$@"
+}
+
+# line: 72, file: /work/poky/meta/classes-global/logging.bbclass
+bbfatal_log() {
+	if [ -p /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/temp/fifo.21594 ] ; then
+		printf "%b\0" "bbfatal_log $*" > /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/temp/fifo.21594
+	else
+		echo "ERROR: $*"
+	fi
+	exit 1
+}
+
+# line: 27, file: /work/poky/meta/classes-global/logging.bbclass
+bbnote() {
+	if [ -p /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/temp/fifo.21594 ] ; then
+		printf "%b\0" "bbnote $*" > /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/temp/fifo.21594
+	else
+		echo "NOTE: $*"
+	fi
+}
+
+cd '/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/build'
+do_deploy
+
+# cleanup
+ret=$?
+trap '' 0
+exit $ret

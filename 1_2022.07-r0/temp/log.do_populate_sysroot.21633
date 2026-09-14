@@ -1,0 +1,36 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/work/poky/meta/recipes-core/musl/musl_git.bb:do_populate_sysroot', '/work/poky/meta/recipes-devtools/binutils/binutils-cross_2.39.bb:do_populate_sysroot', '/work/poky/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/work/poky/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/work/poky/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/work/poky/meta/recipes-kernel/kern-tools/kern-tools-native_git.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-connectivity/openssl/openssl_3.0.7.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/bison/bison_3.8.2.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/flex/flex_2.6.4.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/python/python3-setuptools_65.0.2.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/python/python3_3.10.6.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-devtools/swig/swig_4.0.2.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-extended/bc/bc_1.07.1.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-kernel/dtc/dtc_1.6.1.bb:do_populate_sysroot', 'virtual:native:/work/poky/meta/recipes-support/gnutls/gnutls_3.7.8.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['musl', 'binutils-cross-aarch64', 'gcc-cross-aarch64', 'gcc-runtime', 'quilt-native', 'kern-tools-native', 'openssl-native', 'bison-native', 'flex-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'python3-setuptools-native', 'python3-native', 'swig-native', 'bc-native', 'dtc-native', 'gnutls-native', 'libtool-native', 'libpcre-native', 'texinfo-dummy-native', 'gnu-config-native', 'zlib-native', 'attr-native', 'python3-wheel-native', 'python3-installer-native', 'python3-picobuild-native', 'sqlite3-native', 'libnsl2-native', 'util-linux-libuuid-native', 'ncurses-native', 'bzip2-native', 'xz-native', 'libtirpc-native', 'readline-native', 'libffi-native', 'gdbm-native', 'zstd-native', 'libmpc-native', 'gmp-native', 'mpfr-native', 'linux-libc-headers', 'libunistring-native', 'libidn2-native', 'gettext-minimal-native', 'nettle-native', 'm4-native', 'bsd-headers', 'libssp-nonshared', 'libgcc', 'perl-native', 'python3-flit-core-native', 'make-native', 'unzip-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_populate_sysroot
+DEBUG: Executing shell function sysroot_stage_all
+0 blocks
+DEBUG: Shell function sysroot_stage_all finished
+DEBUG: Executing python function sysroot_strip
+DEBUG: Python function sysroot_strip finished
+DEBUG: Python function do_populate_sysroot finished
+DEBUG: Executing python function do_qa_sysroot
+NOTE: QA checking do_populate_sysroot
+DEBUG: Python function do_qa_sysroot finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Preparing tree /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/sysroot-destdir for packaging at /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/sstate-build-populate_sysroot/sysroot-destdir
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/sstate-build-populate_sysroot/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot' -e '/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native' -e '/work/build-cs1000/tmp/hosttools' | tee /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/sstate-build-populate_sysroot/fixmepath | xargs --no-run-if-empty sed -i -e 's:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/work/build-cs1000/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Reported task 36e77a263f63c5dd4112a46c36bd0c4a186fc7a6243886cd423badd8071d8f87 as unihash 36e77a263f63c5dd4112a46c36bd0c4a186fc7a6243886cd423badd8071d8f87 to unix:///work/build-cs1000/hashserve.sock
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Executing python function uninative_changeinterp
+DEBUG: Python function uninative_changeinterp finished
+DEBUG: Staging files from /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/sysroot-destdir to /work/build-cs1000/tmp/sysroots-components/corstone1000_fvp/u-boot
+DEBUG: Python function sstate_task_postfunc finished

@@ -1,0 +1,6 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/serial/serial_pl01x.c:294:5:pl01x_serial_probe	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/serial/serial_pl01x.c:307:5:pl01x_serial_getc	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/serial/serial_pl01x.c:314:5:pl01x_serial_putc	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/serial/serial_pl01x.c:321:5:pl01x_serial_pending	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/serial/serial_pl01x.c:350:5:pl01x_serial_of_to_plat	96	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/serial/serial_pl01x.c:281:5:pl01x_serial_setbrg	48	static

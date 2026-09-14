@@ -1,0 +1,14 @@
+OEOuthashBasic
+14
+SSTATE_PKGSPEC=sstate:u-boot:corstone1000_fvp-poky-linux-musl:2022.07:r0:corstone1000_fvp:10:
+task=deploy
+drwx                                                                                       .
+drwx                                                                                       ./deploy-u-boot
+-rw-               737216 b550398806526fdd4a7978c3fb3d043877afe23dd54924df783917cf4d06d349 ./deploy-u-boot/u-boot-EFI-2022.07-r0.bin
+lrwx                                                                                       ./deploy-u-boot/u-boot-corstone1000-fvp.bin -> u-boot-EFI-2022.07-r0.bin
+lrwx                                                                                       ./deploy-u-boot/u-boot-corstone1000-fvp.bin-EFI -> u-boot-EFI-2022.07-r0.bin
+lrwx                                                                                       ./deploy-u-boot/u-boot-initial-env-EFI -> u-boot-initial-env-corstone1000-fvp-EFI-2022.07-r0
+lrwx                                                                                       ./deploy-u-boot/u-boot-initial-env-corstone1000-fvp-EFI -> u-boot-initial-env-corstone1000-fvp-EFI-2022.07-r0
+-rw-                 3311 20821f53b9abbe5ccc8b20db089e251b52e0c49e5bd7c4215e9267af64317675 ./deploy-u-boot/u-boot-initial-env-corstone1000-fvp-EFI-2022.07-r0
+lrwx                                                                                       ./deploy-u-boot/u-boot.bin -> u-boot-EFI-2022.07-r0.bin
+lrwx                                                                                       ./deploy-u-boot/u-boot.bin-EFI -> u-boot-EFI-2022.07-r0.bin

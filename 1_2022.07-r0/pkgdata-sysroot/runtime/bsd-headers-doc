@@ -1,0 +1,13 @@
+PN: bsd-headers
+PV: 1.0
+PR: r0
+PKGV: 1.0
+PKGR: r0
+LICENSE: BSD-3-Clause & BSD-2-Clause
+DESCRIPTION:bsd-headers-doc: BSD compatible headers.  This package contains documentation.
+SUMMARY:bsd-headers-doc: BSD compatible headers - Documentation files
+SECTION:bsd-headers-doc: doc
+PKG:bsd-headers-doc: bsd-headers-doc
+FILES:bsd-headers-doc: /usr/share/doc /usr/share/man /usr/share/info /usr/share/gtk-doc             /usr/share/gnome/help
+FILES_INFO:bsd-headers-doc: {}
+PKGSIZE:bsd-headers-doc: 0

@@ -1,0 +1,4 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_esrt.c:111:14:efi_esrt_allocate_install	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_esrt.c:315:14:efi_esrt_populate	224	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_esrt.c:460:20:efi_esrt_new_fmp_notify	16	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/efi_loader/efi_esrt.c:479:14:efi_esrt_register	48	static

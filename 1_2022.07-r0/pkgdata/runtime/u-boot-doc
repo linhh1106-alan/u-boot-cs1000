@@ -1,0 +1,15 @@
+PN: u-boot
+PE: 1
+PV: 2022.07
+PR: r0
+PKGE: 1
+PKGV: 2022.07
+PKGR: r0@EXTENDPRAUTO@
+LICENSE: GPL-2.0-or-later
+DESCRIPTION:u-boot-doc: U-Boot, a boot loader for Embedded boards based on PowerPC, ARM, MIPS and several other processors, which can be installed in a boot ROM and used to initialize and test the hardware or to download and run application code.  This package contains documentation.
+SUMMARY:u-boot-doc: Universal Boot Loader for embedded devices - Documentation files
+SECTION:u-boot-doc: doc
+PKG:u-boot-doc: u-boot-doc
+FILES:u-boot-doc: /usr/share/doc /usr/share/man /usr/share/info /usr/share/gtk-doc             /usr/share/gnome/help
+FILES_INFO:u-boot-doc: {}
+PKGSIZE:u-boot-doc: 0

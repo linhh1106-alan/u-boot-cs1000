@@ -1,0 +1,4 @@
+recipe-sysroot/lib/libssp_nonshared.a
+recipe-sysroot/sysroot-providers/libssp-nonshared
+recipe-sysroot/sysroot-providers/
+recipe-sysroot/lib/

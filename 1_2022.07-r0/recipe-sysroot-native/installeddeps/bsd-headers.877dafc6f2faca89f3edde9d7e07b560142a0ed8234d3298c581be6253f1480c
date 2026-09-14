@@ -1,0 +1,8 @@
+recipe-sysroot/sysroot-providers/bsd-headers
+recipe-sysroot/usr/include/sys/tree.h
+recipe-sysroot/usr/include/sys/queue.h
+recipe-sysroot/usr/include/sys/cdefs.h
+recipe-sysroot/sysroot-providers/
+recipe-sysroot/usr/include/sys/
+recipe-sysroot/usr/include/
+recipe-sysroot/usr/

@@ -1,0 +1,4 @@
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/usb/isp1760/isp1760-uboot.c:59:12:isp1760_get_max_xfer_size	32	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/usb/isp1760/isp1760-uboot.c:49:12:isp1760_msg_submit_irq	64	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/usb/isp1760/isp1760-uboot.c:40:12:isp1760_msg_submit_bulk	48	static
+/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/drivers/usb/isp1760/isp1760-uboot.c:28:12:isp1760_msg_submit_control	80	static

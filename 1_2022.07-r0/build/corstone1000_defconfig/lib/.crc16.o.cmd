@@ -1,0 +1,49 @@
+cmd_lib/crc16.o := aarch64-poky-linux-musl-gcc  --sysroot=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot -Wp,-MD,lib/.crc16.o.d -nostdinc -isystem /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/bin/aarch64-poky-linux-musl/../../lib/aarch64-poky-linux-musl/gcc/aarch64-poky-linux-musl/12.2.0/include -Iinclude  -I/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/include  -I/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/arch/arm/include -include /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/include/linux/kconfig.h  -I/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib -Ilib -D__KERNEL__ -D__UBOOT__ -Wall -Wstrict-prototypes -Wno-format-security -fno-builtin -ffreestanding -std=gnu11 -fshort-wchar -fno-strict-aliasing -fno-PIE -Os -fno-stack-protector -fno-delete-null-pointer-checks -Wno-pointer-sign -Wno-stringop-truncation -Wno-zero-length-bounds -Wno-array-bounds -Wno-stringop-overflow -Wno-maybe-uninitialized -fmacro-prefix-map=/work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/= -g -fstack-usage -Wno-format-nonliteral -Wno-address-of-packed-member -Wno-unused-but-set-variable -Werror=date-time -Wno-packed-not-aligned -D__ARM__ -fno-pic -mstrict-align -ffunction-sections -fdata-sections -fno-common -ffixed-r9 -mgeneral-regs-only -fno-common -ffixed-x18 -pipe -march=armv8-a+crc -D__LINUX_ARM_ARCH__=8    -DKBUILD_BASENAME='"crc16"'  -DKBUILD_MODNAME='"crc16"' -c -o lib/crc16.o /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/crc16.c
+
+source_lib/crc16.o := /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/lib/crc16.c
+
+deps_lib/crc16.o := \
+  /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/include/linux/kconfig.h \
+    $(wildcard include/config/booger.h) \
+    $(wildcard include/config/foo.h) \
+    $(wildcard include/config/spl/.h) \
+    $(wildcard include/config/tpl/.h) \
+    $(wildcard include/config/tools/.h) \
+    $(wildcard include/config/tpl/build.h) \
+    $(wildcard include/config/vpl/build.h) \
+    $(wildcard include/config/spl/build.h) \
+    $(wildcard include/config/tools/foo.h) \
+    $(wildcard include/config/spl/foo.h) \
+    $(wildcard include/config/tpl/foo.h) \
+    $(wildcard include/config/vpl/foo.h) \
+    $(wildcard include/config/option.h) \
+    $(wildcard include/config/acme.h) \
+    $(wildcard include/config/spl/acme.h) \
+    $(wildcard include/config/tpl/acme.h) \
+    $(wildcard include/config/if/enabled/int.h) \
+    $(wildcard include/config/int/option.h) \
+  /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/include/linux/types.h \
+    $(wildcard include/config/uid16.h) \
+  /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/include/linux/posix_types.h \
+  /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/include/linux/stddef.h \
+  /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/include/linux/compiler_types.h \
+    $(wildcard include/config/have/arch/compiler/h.h) \
+    $(wildcard include/config/enable/must/check.h) \
+    $(wildcard include/config/optimize/inlining.h) \
+    $(wildcard include/config/cc/has/asm/inline.h) \
+  /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/include/linux/compiler_attributes.h \
+  /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/include/linux/compiler-gcc.h \
+    $(wildcard include/config/retpoline.h) \
+    $(wildcard include/config/arch/use/builtin/bswap.h) \
+  /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/arch/arm/include/asm/posix_types.h \
+  /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/arch/arm/include/asm/types.h \
+    $(wildcard include/config/arm64.h) \
+    $(wildcard include/config/phys/64bit.h) \
+    $(wildcard include/config/dma/addr/t/64bit.h) \
+  /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/include/asm-generic/int-ll64.h \
+  /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/recipe-sysroot-native/usr/lib/aarch64-poky-linux-musl/gcc/aarch64-poky-linux-musl/12.2.0/include/stdbool.h \
+  /work/build-cs1000/tmp/work/corstone1000_fvp-poky-linux-musl/u-boot/1_2022.07-r0/git/include/linux/crc16.h \
+
+lib/crc16.o: $(deps_lib/crc16.o)
+
+$(deps_lib/crc16.o):
