@@ -1,0 +1,19 @@
+root@corstone1000-fvp:~# dmesg | grep -i "psci\|smp\|cpu[1-3]\|failed"
+Linux version 5.19.14-yocto-standard (oe-user@oe-host) (aarch64-poky-linux-musl-gcc (GCC) 12.2.0, GNU ld (GNU Binutils) 2.39.0.20220819) #1 SMP PREEMPT Thu Oct 6 18:16:52 UTC 2022
+psci: probing for conduit method from DT.
+psci: PSCIv1.1 detected in firmware.
+psci: Using standard PSCI v0.2 function IDs
+psci: MIGRATE_INFO_TYPE not supported.
+psci: SMC Calling Convention v1.2
+smp: Bringing up secondary CPUs ...
+CPU1: failed to come online
+CPU1: failed in unknown state : 0x0
+CPU2: failed to come online
+CPU2: failed in unknown state : 0x0
+CPU3: failed to come online
+CPU3: failed in unknown state : 0x0
+smp: Brought up 1 node, 1 CPU
+SMP: Total of 1 processors activated.
+root@corstone1000-fvp:~# 
+
+
